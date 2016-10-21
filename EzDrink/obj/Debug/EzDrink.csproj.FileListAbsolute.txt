@@ -1,0 +1,75 @@
+c:\users\leon\documents\visual studio 2015\Projects\EzDrink\EzDrink\bin\Debug\EzDrink.exe.config
+c:\users\leon\documents\visual studio 2015\Projects\EzDrink\EzDrink\bin\Debug\EzDrink.exe
+c:\users\leon\documents\visual studio 2015\Projects\EzDrink\EzDrink\bin\Debug\EzDrink.pdb
+c:\users\leon\documents\visual studio 2015\Projects\EzDrink\EzDrink\obj\Debug\EzDrink.csprojResolveAssemblyReference.cache
+c:\users\leon\documents\visual studio 2015\Projects\EzDrink\EzDrink\obj\Debug\EzDrink.Properties.Resources.resources
+c:\users\leon\documents\visual studio 2015\Projects\EzDrink\EzDrink\obj\Debug\EzDrink.csproj.GenerateResource.Cache
+c:\users\leon\documents\visual studio 2015\Projects\EzDrink\EzDrink\obj\Debug\EzDrink.exe
+c:\users\leon\documents\visual studio 2015\Projects\EzDrink\EzDrink\obj\Debug\EzDrink.pdb
+C:\Users\Leon\Documents\Visual Studio 2015\Projects\EzDrink\EzDrink\obj\Debug\EzDrink.EzDrinkForm.resources
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\EzDrink\EzDrink\bin\Debug\EzDrink.exe.config
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\EzDrink\EzDrink\obj\Debug\EzDrink.exe
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\EzDrink\EzDrink\obj\Debug\EzDrink.pdb
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\EzDrink\EzDrink\bin\Debug\EzDrink.exe
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\EzDrink\EzDrink\bin\Debug\EzDrink.pdb
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\EzDrink\EzDrink\obj\Debug\EzDrink.csprojResolveAssemblyReference.cache
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\EzDrink\EzDrink\obj\Debug\EzDrink.EzDrinkForm.resources
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\EzDrink\EzDrink\obj\Debug\EzDrink.Properties.Resources.resources
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\EzDrink\EzDrink\obj\Debug\EzDrink.csproj.GenerateResource.Cache
+C:\Users\Leon\Desktop\EzDrink\EzDrink\bin\Debug\EzDrink.exe.config
+C:\Users\Leon\Desktop\EzDrink\EzDrink\obj\Debug\EzDrink.exe
+C:\Users\Leon\Desktop\EzDrink\EzDrink\obj\Debug\EzDrink.pdb
+C:\Users\Leon\Desktop\EzDrink\EzDrink\bin\Debug\EzDrink.exe
+C:\Users\Leon\Desktop\EzDrink\EzDrink\bin\Debug\EzDrink.pdb
+C:\Users\Leon\Desktop\EzDrink\EzDrink\obj\Debug\EzDrink.csprojResolveAssemblyReference.cache
+C:\Users\Leon\Desktop\EzDrink\EzDrink\obj\Debug\EzDrink.EzDrinkForm.resources
+C:\Users\Leon\Desktop\EzDrink\EzDrink\obj\Debug\EzDrink.Properties.Resources.resources
+C:\Users\Leon\Desktop\EzDrink\EzDrink\obj\Debug\EzDrink.csproj.GenerateResource.Cache
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW1\EzDrink\EzDrink\bin\Debug\EzDrink.exe.config
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW1\EzDrink\EzDrink\obj\Debug\EzDrink.exe
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW1\EzDrink\EzDrink\obj\Debug\EzDrink.pdb
+F:\105-1 NTUT\EzDrink\EzDrink\bin\Debug\EzDrink.exe.config
+F:\105-1 NTUT\EzDrink\EzDrink\obj\Debug\EzDrink.exe
+F:\105-1 NTUT\EzDrink\EzDrink\obj\Debug\EzDrink.pdb
+F:\105-1 NTUT\EzDrink\EzDrink\bin\Debug\EzDrink.exe
+F:\105-1 NTUT\EzDrink\EzDrink\bin\Debug\EzDrink.pdb
+F:\105-1 NTUT\EzDrink\EzDrink\obj\Debug\EzDrink.csprojResolveAssemblyReference.cache
+F:\105-1 NTUT\EzDrink\EzDrink\obj\Debug\EzDrink.EzDrinkForm.resources
+F:\105-1 NTUT\EzDrink\EzDrink\obj\Debug\EzDrink.Properties.Resources.resources
+F:\105-1 NTUT\EzDrink\EzDrink\obj\Debug\EzDrink.csproj.GenerateResource.Cache
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW1 ver.2\EzDrink\EzDrink\bin\Debug\EzDrink.exe.config
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW1 ver.2\EzDrink\EzDrink\obj\Debug\EzDrink.exe
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW1 ver.2\EzDrink\EzDrink\obj\Debug\EzDrink.pdb
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW1 ver.2\EzDrink\EzDrink\bin\Debug\EzDrink.exe
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW1 ver.2\EzDrink\EzDrink\bin\Debug\EzDrink.pdb
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW1 ver.2\EzDrink\EzDrink\obj\Debug\EzDrink.csprojResolveAssemblyReference.cache
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW1 ver.2\EzDrink\EzDrink\obj\Debug\EzDrink.EzDrinkForm.resources
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW1 ver.2\EzDrink\EzDrink\obj\Debug\EzDrink.Properties.Resources.resources
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW1 ver.2\EzDrink\EzDrink\obj\Debug\EzDrink.csproj.GenerateResource.Cache
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW1 ver.3\EzDrink\EzDrink\bin\Debug\EzDrink.exe.config
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW1 ver.3\EzDrink\EzDrink\obj\Debug\EzDrink.exe
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW1 ver.3\EzDrink\EzDrink\obj\Debug\EzDrink.pdb
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW1 ver.3\EzDrink\EzDrink\obj\Debug\EzDrink.csprojResolveAssemblyReference.cache
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW1 ver.3\EzDrink\EzDrink\obj\Debug\EzDrink.EzDrinkForm.resources
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW1 ver.3\EzDrink\EzDrink\obj\Debug\EzDrink.Properties.Resources.resources
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW1 ver.3\EzDrink\EzDrink\obj\Debug\EzDrink.csproj.GenerateResource.Cache
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW1 ver.3\EzDrink\EzDrink\bin\Debug\EzDrink.exe
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW1 ver.3\EzDrink\EzDrink\bin\Debug\EzDrink.pdb
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW2\EzDrink\EzDrink\bin\Debug\EzDrink.exe.config
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW2\EzDrink\EzDrink\obj\Debug\EzDrink.exe
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW2\EzDrink\EzDrink\obj\Debug\EzDrink.pdb
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW2\EzDrink\EzDrink\bin\Debug\EzDrink.exe
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW2\EzDrink\EzDrink\bin\Debug\EzDrink.pdb
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW2\EzDrink\EzDrink\obj\Debug\EzDrink.csprojResolveAssemblyReference.cache
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW2\EzDrink\EzDrink\obj\Debug\EzDrink.EzDrinkForm.resources
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW2\EzDrink\EzDrink\obj\Debug\EzDrink.Properties.Resources.resources
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW2\EzDrink\EzDrink\obj\Debug\EzDrink.csproj.GenerateResource.Cache
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW2.ver2\EzDrink\EzDrink\bin\Debug\EzDrink.exe.config
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW2.ver2\EzDrink\EzDrink\obj\Debug\EzDrink.exe
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW2.ver2\EzDrink\EzDrink\obj\Debug\EzDrink.pdb
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW2.ver2\EzDrink\EzDrink\bin\Debug\EzDrink.exe
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW2.ver2\EzDrink\EzDrink\bin\Debug\EzDrink.pdb
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW2.ver2\EzDrink\EzDrink\obj\Debug\EzDrink.csprojResolveAssemblyReference.cache
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW2.ver2\EzDrink\EzDrink\obj\Debug\EzDrink.EzDrinkForm.resources
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW2.ver2\EzDrink\EzDrink\obj\Debug\EzDrink.Properties.Resources.resources
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\HW2.ver2\EzDrink\EzDrink\obj\Debug\EzDrink.csproj.GenerateResource.Cache
