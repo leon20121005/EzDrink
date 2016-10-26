@@ -185,212 +185,7 @@
     <div class="data">
       <Data id="ReviewPalData">
         <CodeReview xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-          <Reviews>
-            <Smell>
-              <Id>1</Id>
-              <SmellType>Large class(過大類別)</SmellType>
-              <HashCode>LargeClass.EzDrink.EzDrinkForm.201</HashCode>
-              <Severity>Warning</Severity>
-              <Weight>201</Weight>
-              <Project>EzDrink</Project>
-              <File>EzDrinkForm.cs</File>
-              <Line>13</Line>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>2</Id>
-              <SmellType>Lack of comments(缺乏註解)</SmellType>
-              <HashCode>LackOfComments</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>EzDrink</Project>
-              <File>EzDrinkForm.cs</File>
-              <Line>231</Line>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>3</Id>
-              <SmellType>ICS(函式-1)</SmellType>
-              <HashCode>Method1.EzDrinkForm._aboutToolStripMenuItem_Click</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>EzDrink</Project>
-              <File>EzDrinkForm.cs</File>
-              <Line>231</Line>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>4</Id>
-              <SmellType>ICS(函式-2)</SmellType>
-              <HashCode>Method2.EzDrinkForm._aboutToolStripMenuItem_Click</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>EzDrink</Project>
-              <File>EzDrinkForm.cs</File>
-              <Line>231</Line>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>5</Id>
-              <SmellType>Lack of comments(缺乏註解)</SmellType>
-              <HashCode>LackOfComments</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>EzDrink</Project>
-              <File>OrderList.cs</File>
-              <Line>11</Line>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>6</Id>
-              <SmellType>Lack of comments(缺乏註解)</SmellType>
-              <HashCode>LackOfComments</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>EzDrink</Project>
-              <File>OrderList.cs</File>
-              <Line>16</Line>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>7</Id>
-              <SmellType>Lack of comments(缺乏註解)</SmellType>
-              <HashCode>LackOfComments</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>EzDrink</Project>
-              <File>OrderList.cs</File>
-              <Line>21</Line>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>8</Id>
-              <SmellType>Lack of comments(缺乏註解)</SmellType>
-              <HashCode>LackOfComments</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>EzDrink</Project>
-              <File>OrderList.cs</File>
-              <Line>26</Line>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>9</Id>
-              <SmellType>Lack of comments(缺乏註解)</SmellType>
-              <HashCode>LackOfComments</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>EzDrink</Project>
-              <File>OrderList.cs</File>
-              <Line>31</Line>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>10</Id>
-              <SmellType>Lack of comments(缺乏註解)</SmellType>
-              <HashCode>LackOfComments</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>EzDrink</Project>
-              <File>OrderList.cs</File>
-              <Line>36</Line>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>11</Id>
-              <SmellType>Lack of comments(缺乏註解)</SmellType>
-              <HashCode>LackOfComments</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>EzDrink</Project>
-              <File>OrderList.cs</File>
-              <Line>41</Line>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>12</Id>
-              <SmellType>Lack of comments(缺乏註解)</SmellType>
-              <HashCode>LackOfComments</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>EzDrink</Project>
-              <File>OrderList.cs</File>
-              <Line>46</Line>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>13</Id>
-              <SmellType>Lack of comments(缺乏註解)</SmellType>
-              <HashCode>LackOfComments</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>EzDrink</Project>
-              <File>OrderList.cs</File>
-              <Line>51</Line>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>14</Id>
-              <SmellType>Lack of comments(缺乏註解)</SmellType>
-              <HashCode>LackOfComments</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>EzDrink</Project>
-              <File>OrderList.cs</File>
-              <Line>56</Line>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>15</Id>
-              <SmellType>Lack of comments(缺乏註解)</SmellType>
-              <HashCode>LackOfComments</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>EzDrink</Project>
-              <File>OrderList.cs</File>
-              <Line>61</Line>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>16</Id>
-              <SmellType>Lack of comments(缺乏註解)</SmellType>
-              <HashCode>LackOfComments</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>EzDrink</Project>
-              <File>OrderList.cs</File>
-              <Line>66</Line>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-            <Smell>
-              <Id>17</Id>
-              <SmellType>Lack of comments(缺乏註解)</SmellType>
-              <HashCode>LackOfComments</HashCode>
-              <Severity>Red</Severity>
-              <Weight>1</Weight>
-              <Project>EzDrink</Project>
-              <File>OrderList.cs</File>
-              <Line>77</Line>
-              <Comment />
-              <Auto>false</Auto>
-            </Smell>
-          </Reviews>
+          <Reviews />
           <HashCodeIgnoreList>
             <string>LackOfComments</string>
             <string>LiteralConstants.InitializeOrderList."價格"</string>
@@ -433,6 +228,11 @@
                 <AnalysisFileType>Designer</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
+                <RelativePath>EzDrinkFormManagement.cs</RelativePath>
+                <ProjectName>EzDrink</ProjectName>
+                <AnalysisFileType>ViewOrController</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
                 <RelativePath>Model\Drink.cs</RelativePath>
                 <ProjectName>EzDrink</ProjectName>
                 <AnalysisFileType>Model</AnalysisFileType>
@@ -448,6 +248,11 @@
                 <AnalysisFileType>Model</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
+                <RelativePath>Model\DrinkModelInitialization.cs</RelativePath>
+                <ProjectName>EzDrink</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
                 <RelativePath>Model\Order.cs</RelativePath>
                 <ProjectName>EzDrink</ProjectName>
                 <AnalysisFileType>Model</AnalysisFileType>
@@ -458,7 +263,17 @@
                 <AnalysisFileType>Model</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
-                <RelativePath>PresentationModel\PresentationModel.cs</RelativePath>
+                <RelativePath>PresentationModel\ManagementPresentation.cs</RelativePath>
+                <ProjectName>EzDrink</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>PresentationModel\ManagementPresentationPrivate.cs</RelativePath>
+                <ProjectName>EzDrink</ProjectName>
+                <AnalysisFileType>Model</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>PresentationModel\OrderPresentation.cs</RelativePath>
                 <ProjectName>EzDrink</ProjectName>
                 <AnalysisFileType>Model</AnalysisFileType>
               </AnalysisFile>
@@ -494,7 +309,7 @@
               </AnalysisFile>
             </AnalysisFiles>
           </AnalysisFileManager>
-          <ProductionLoc>1845</ProductionLoc>
+          <ProductionLoc>2672</ProductionLoc>
           <TestLoc>0</TestLoc>
         </CodeReview>
       </Data>

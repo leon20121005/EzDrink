@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle = new System.Windows.Forms.DataGridViewCellStyle();
             this._menuStrip = new System.Windows.Forms.MenuStrip();
             this._fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,10 +39,22 @@
             this._orderSystemTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this._orderGroupBox = new System.Windows.Forms.GroupBox();
             this._orderDataGridView = new System.Windows.Forms.DataGridView();
+            this._orderNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._orderPriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._orderSugarColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._orderTemperatureColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._orderAdditionColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._orderButtonColumn = new System.Windows.Forms.DataGridViewButtonColumn();
             this._categoryGroupBox = new System.Windows.Forms.GroupBox();
             this._categoryDataGridView = new System.Windows.Forms.DataGridView();
+            this._drinkButtonColumn = new System.Windows.Forms.DataGridViewButtonColumn();
+            this._drinkNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._drinkPriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._additionGroupBox = new System.Windows.Forms.GroupBox();
             this._additionDataGridView = new System.Windows.Forms.DataGridView();
+            this._additionButtonColumn = new EzDrink.DataGridViewDisableButtonColumn();
+            this._additionNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._additionPriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._sugarGroupBox = new System.Windows.Forms.GroupBox();
             this._sugarTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this._halfSugarButton = new System.Windows.Forms.Button();
@@ -62,22 +74,30 @@
             this._managementSystemTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this._drinkListGroupBox = new System.Windows.Forms.GroupBox();
             this._drinkListDataGridView = new System.Windows.Forms.DataGridView();
+            this._drinkListButtonColumn = new System.Windows.Forms.DataGridViewButtonColumn();
+            this._drinkListNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._drinkListPriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._additionListGroupBox = new System.Windows.Forms.GroupBox();
             this._additionListDataGridView = new System.Windows.Forms.DataGridView();
+            this._additionListButtonColumn = new System.Windows.Forms.DataGridViewButtonColumn();
+            this._additionListNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._additionListPriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._drinkManipulateGroupBox = new System.Windows.Forms.GroupBox();
+            this._drinkManipulateTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this._newDrinkButton = new System.Windows.Forms.Button();
+            this._fileImportDrinkButton = new System.Windows.Forms.Button();
+            this._drinkNameLabel = new System.Windows.Forms.Label();
+            this._drinkPriceLabel = new System.Windows.Forms.Label();
+            this._drinkNameTextBox = new System.Windows.Forms.TextBox();
+            this._drinkPriceTextBox = new System.Windows.Forms.TextBox();
             this._additionManipulateGroupBox = new System.Windows.Forms.GroupBox();
-            this._drinkButtonColumn = new System.Windows.Forms.DataGridViewButtonColumn();
-            this._drinkNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._drinkPriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._additionButtonColumn = new EzDrink.DataGridViewDisableButtonColumn();
-            this._additionNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._additionPriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._orderNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._orderPriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._orderSugarColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._orderTemperatureColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._orderAdditionColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._orderButtonColumn = new System.Windows.Forms.DataGridViewButtonColumn();
+            this._additionManipulateTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this._newAdditionButton = new System.Windows.Forms.Button();
+            this._fileImportAdditionButton = new System.Windows.Forms.Button();
+            this._additionNameLabel = new System.Windows.Forms.Label();
+            this._additionPriceLabel = new System.Windows.Forms.Label();
+            this._additionNameTextBox = new System.Windows.Forms.TextBox();
+            this._additionPriceTextBox = new System.Windows.Forms.TextBox();
             this._menuStrip.SuspendLayout();
             this._tabControl.SuspendLayout();
             this._orderSystemTabPage.SuspendLayout();
@@ -99,6 +119,10 @@
             ((System.ComponentModel.ISupportInitialize)(this._drinkListDataGridView)).BeginInit();
             this._additionListGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._additionListDataGridView)).BeginInit();
+            this._drinkManipulateGroupBox.SuspendLayout();
+            this._drinkManipulateTableLayoutPanel.SuspendLayout();
+            this._additionManipulateGroupBox.SuspendLayout();
+            this._additionManipulateTableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // _menuStrip
@@ -140,7 +164,7 @@
             this._aboutToolStripMenuItem.Name = "_aboutToolStripMenuItem";
             this._aboutToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this._aboutToolStripMenuItem.Text = "About";
-            this._aboutToolStripMenuItem.Click += new System.EventHandler(this._aboutToolStripMenuItem_Click);
+            this._aboutToolStripMenuItem.Click += new System.EventHandler(this.ClickAboutToolStripMenuItem);
             // 
             // _tabControl
             // 
@@ -152,6 +176,7 @@
             this._tabControl.SelectedIndex = 0;
             this._tabControl.Size = new System.Drawing.Size(884, 517);
             this._tabControl.TabIndex = 1;
+            this._tabControl.SelectedIndexChanged += new System.EventHandler(this.ChangeTabControlSelectedIndex);
             // 
             // _orderSystemTabPage
             // 
@@ -232,6 +257,56 @@
             this._orderDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ClickOrderDataGridViewCellContent);
             this._orderDataGridView.Click += new System.EventHandler(this.ClickOrderDataGridView);
             // 
+            // _orderNameColumn
+            // 
+            this._orderNameColumn.FillWeight = 90F;
+            this._orderNameColumn.HeaderText = "飲料名稱";
+            this._orderNameColumn.Name = "_orderNameColumn";
+            this._orderNameColumn.ReadOnly = true;
+            this._orderNameColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // _orderPriceColumn
+            // 
+            this._orderPriceColumn.FillWeight = 40F;
+            this._orderPriceColumn.HeaderText = "價格";
+            this._orderPriceColumn.Name = "_orderPriceColumn";
+            this._orderPriceColumn.ReadOnly = true;
+            this._orderPriceColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // _orderSugarColumn
+            // 
+            this._orderSugarColumn.FillWeight = 40F;
+            this._orderSugarColumn.HeaderText = "甜度";
+            this._orderSugarColumn.Name = "_orderSugarColumn";
+            this._orderSugarColumn.ReadOnly = true;
+            this._orderSugarColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // _orderTemperatureColumn
+            // 
+            this._orderTemperatureColumn.FillWeight = 40F;
+            this._orderTemperatureColumn.HeaderText = "溫度";
+            this._orderTemperatureColumn.Name = "_orderTemperatureColumn";
+            this._orderTemperatureColumn.ReadOnly = true;
+            this._orderTemperatureColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // _orderAdditionColumn
+            // 
+            this._orderAdditionColumn.FillWeight = 83F;
+            this._orderAdditionColumn.HeaderText = "加料";
+            this._orderAdditionColumn.Name = "_orderAdditionColumn";
+            this._orderAdditionColumn.ReadOnly = true;
+            this._orderAdditionColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // _orderButtonColumn
+            // 
+            dataGridViewCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle.NullValue = "刪除";
+            this._orderButtonColumn.DefaultCellStyle = dataGridViewCellStyle;
+            this._orderButtonColumn.FillWeight = 40F;
+            this._orderButtonColumn.HeaderText = "";
+            this._orderButtonColumn.Name = "_orderButtonColumn";
+            this._orderButtonColumn.ReadOnly = true;
+            // 
             // _categoryGroupBox
             // 
             this._categoryGroupBox.Controls.Add(this._categoryDataGridView);
@@ -270,6 +345,29 @@
             this._categoryDataGridView.TabIndex = 0;
             this._categoryDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ClickCategoryDataGridViewCellContent);
             // 
+            // _drinkButtonColumn
+            // 
+            this._drinkButtonColumn.FillWeight = 40F;
+            this._drinkButtonColumn.HeaderText = "";
+            this._drinkButtonColumn.Name = "_drinkButtonColumn";
+            this._drinkButtonColumn.ReadOnly = true;
+            // 
+            // _drinkNameColumn
+            // 
+            this._drinkNameColumn.FillWeight = 110F;
+            this._drinkNameColumn.HeaderText = "名稱";
+            this._drinkNameColumn.Name = "_drinkNameColumn";
+            this._drinkNameColumn.ReadOnly = true;
+            this._drinkNameColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // _drinkPriceColumn
+            // 
+            this._drinkPriceColumn.FillWeight = 70F;
+            this._drinkPriceColumn.HeaderText = "價格";
+            this._drinkPriceColumn.Name = "_drinkPriceColumn";
+            this._drinkPriceColumn.ReadOnly = true;
+            this._drinkPriceColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // _additionGroupBox
             // 
             this._additionGroupBox.Controls.Add(this._additionDataGridView);
@@ -305,6 +403,29 @@
             this._additionDataGridView.Size = new System.Drawing.Size(223, 209);
             this._additionDataGridView.TabIndex = 0;
             this._additionDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ClickAdditionDataGridViewCellContent);
+            // 
+            // _additionButtonColumn
+            // 
+            this._additionButtonColumn.FillWeight = 40F;
+            this._additionButtonColumn.HeaderText = "";
+            this._additionButtonColumn.Name = "_additionButtonColumn";
+            this._additionButtonColumn.ReadOnly = true;
+            // 
+            // _additionNameColumn
+            // 
+            this._additionNameColumn.FillWeight = 110F;
+            this._additionNameColumn.HeaderText = "名稱";
+            this._additionNameColumn.Name = "_additionNameColumn";
+            this._additionNameColumn.ReadOnly = true;
+            this._additionNameColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // _additionPriceColumn
+            // 
+            this._additionPriceColumn.FillWeight = 70F;
+            this._additionPriceColumn.HeaderText = "價格";
+            this._additionPriceColumn.Name = "_additionPriceColumn";
+            this._additionPriceColumn.ReadOnly = true;
+            this._additionPriceColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // _sugarGroupBox
             // 
@@ -546,16 +667,46 @@
             // _drinkListDataGridView
             // 
             this._drinkListDataGridView.AllowUserToAddRows = false;
+            this._drinkListDataGridView.AllowUserToResizeColumns = false;
+            this._drinkListDataGridView.AllowUserToResizeRows = false;
             this._drinkListDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this._drinkListDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this._drinkListDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this._drinkListDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this._drinkListDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this._drinkListButtonColumn,
+            this._drinkListNameColumn,
+            this._drinkListPriceColumn});
             this._drinkListDataGridView.Location = new System.Drawing.Point(5, 21);
             this._drinkListDataGridView.Name = "_drinkListDataGridView";
-            this._drinkListDataGridView.ReadOnly = true;
+            this._drinkListDataGridView.RowHeadersVisible = false;
             this._drinkListDataGridView.RowTemplate.Height = 24;
             this._drinkListDataGridView.Size = new System.Drawing.Size(279, 452);
             this._drinkListDataGridView.TabIndex = 0;
+            this._drinkListDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ClickDrinkListDataGridViewCellContent);
+            this._drinkListDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.EndEditDrinkListDataGridViewCell);
+            // 
+            // _drinkListButtonColumn
+            // 
+            this._drinkListButtonColumn.FillWeight = 40F;
+            this._drinkListButtonColumn.HeaderText = "";
+            this._drinkListButtonColumn.Name = "_drinkListButtonColumn";
+            // 
+            // _drinkListNameColumn
+            // 
+            this._drinkListNameColumn.FillWeight = 170F;
+            this._drinkListNameColumn.HeaderText = "飲料名稱";
+            this._drinkListNameColumn.Name = "_drinkListNameColumn";
+            this._drinkListNameColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // _drinkListPriceColumn
+            // 
+            this._drinkListPriceColumn.FillWeight = 66F;
+            this._drinkListPriceColumn.HeaderText = "價格";
+            this._drinkListPriceColumn.Name = "_drinkListPriceColumn";
+            this._drinkListPriceColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // _additionListGroupBox
             // 
@@ -572,19 +723,51 @@
             // _additionListDataGridView
             // 
             this._additionListDataGridView.AllowUserToAddRows = false;
+            this._additionListDataGridView.AllowUserToResizeColumns = false;
+            this._additionListDataGridView.AllowUserToResizeRows = false;
             this._additionListDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this._additionListDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this._additionListDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this._additionListDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this._additionListDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this._additionListButtonColumn,
+            this._additionListNameColumn,
+            this._additionListPriceColumn});
             this._additionListDataGridView.Location = new System.Drawing.Point(5, 21);
             this._additionListDataGridView.Name = "_additionListDataGridView";
-            this._additionListDataGridView.ReadOnly = true;
+            this._additionListDataGridView.RowHeadersVisible = false;
             this._additionListDataGridView.RowTemplate.Height = 24;
             this._additionListDataGridView.Size = new System.Drawing.Size(282, 452);
             this._additionListDataGridView.TabIndex = 1;
+            this._additionListDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ClickAdditionListDataGridViewCellContent);
+            this._additionListDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.EndEditAdditionListDataGridViewCell);
+            // 
+            // _additionListButtonColumn
+            // 
+            this._additionListButtonColumn.FillWeight = 40F;
+            this._additionListButtonColumn.HeaderText = "";
+            this._additionListButtonColumn.Name = "_additionListButtonColumn";
+            // 
+            // _additionListNameColumn
+            // 
+            this._additionListNameColumn.FillWeight = 170F;
+            this._additionListNameColumn.HeaderText = "名稱";
+            this._additionListNameColumn.Name = "_additionListNameColumn";
+            this._additionListNameColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this._additionListNameColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // _additionListPriceColumn
+            // 
+            this._additionListPriceColumn.FillWeight = 69F;
+            this._additionListPriceColumn.HeaderText = "價格";
+            this._additionListPriceColumn.Name = "_additionListPriceColumn";
+            this._additionListPriceColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // _drinkManipulateGroupBox
             // 
+            this._drinkManipulateGroupBox.Controls.Add(this._drinkManipulateTableLayoutPanel);
             this._drinkManipulateGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this._drinkManipulateGroupBox.Location = new System.Drawing.Point(315, 3);
             this._drinkManipulateGroupBox.Name = "_drinkManipulateGroupBox";
@@ -593,8 +776,95 @@
             this._drinkManipulateGroupBox.TabStop = false;
             this._drinkManipulateGroupBox.Text = "飲料清單操作";
             // 
+            // _drinkManipulateTableLayoutPanel
+            // 
+            this._drinkManipulateTableLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._drinkManipulateTableLayoutPanel.ColumnCount = 3;
+            this._drinkManipulateTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46F));
+            this._drinkManipulateTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8F));
+            this._drinkManipulateTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46F));
+            this._drinkManipulateTableLayoutPanel.Controls.Add(this._newDrinkButton, 0, 0);
+            this._drinkManipulateTableLayoutPanel.Controls.Add(this._fileImportDrinkButton, 2, 0);
+            this._drinkManipulateTableLayoutPanel.Controls.Add(this._drinkNameLabel, 0, 1);
+            this._drinkManipulateTableLayoutPanel.Controls.Add(this._drinkPriceLabel, 0, 2);
+            this._drinkManipulateTableLayoutPanel.Controls.Add(this._drinkNameTextBox, 2, 1);
+            this._drinkManipulateTableLayoutPanel.Controls.Add(this._drinkPriceTextBox, 2, 2);
+            this._drinkManipulateTableLayoutPanel.Location = new System.Drawing.Point(6, 21);
+            this._drinkManipulateTableLayoutPanel.Name = "_drinkManipulateTableLayoutPanel";
+            this._drinkManipulateTableLayoutPanel.RowCount = 3;
+            this._drinkManipulateTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this._drinkManipulateTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this._drinkManipulateTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this._drinkManipulateTableLayoutPanel.Size = new System.Drawing.Size(225, 209);
+            this._drinkManipulateTableLayoutPanel.TabIndex = 0;
+            // 
+            // _newDrinkButton
+            // 
+            this._newDrinkButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this._newDrinkButton.Location = new System.Drawing.Point(3, 3);
+            this._newDrinkButton.Name = "_newDrinkButton";
+            this._newDrinkButton.Size = new System.Drawing.Size(97, 56);
+            this._newDrinkButton.TabIndex = 0;
+            this._newDrinkButton.Text = "新增";
+            this._newDrinkButton.UseVisualStyleBackColor = true;
+            this._newDrinkButton.Click += new System.EventHandler(this.ClickNewDrinkButton);
+            // 
+            // _fileImportDrinkButton
+            // 
+            this._fileImportDrinkButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this._fileImportDrinkButton.Location = new System.Drawing.Point(124, 3);
+            this._fileImportDrinkButton.Name = "_fileImportDrinkButton";
+            this._fileImportDrinkButton.Size = new System.Drawing.Size(98, 56);
+            this._fileImportDrinkButton.TabIndex = 1;
+            this._fileImportDrinkButton.Text = "從檔案匯入";
+            this._fileImportDrinkButton.UseVisualStyleBackColor = true;
+            this._fileImportDrinkButton.Click += new System.EventHandler(this.ClickFileImportDrinkButton);
+            // 
+            // _drinkNameLabel
+            // 
+            this._drinkNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this._drinkNameLabel.AutoSize = true;
+            this._drinkNameLabel.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this._drinkNameLabel.Location = new System.Drawing.Point(3, 88);
+            this._drinkNameLabel.Name = "_drinkNameLabel";
+            this._drinkNameLabel.Size = new System.Drawing.Size(97, 20);
+            this._drinkNameLabel.TabIndex = 2;
+            this._drinkNameLabel.Text = "飲料名稱 :";
+            this._drinkNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // _drinkPriceLabel
+            // 
+            this._drinkPriceLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this._drinkPriceLabel.AutoSize = true;
+            this._drinkPriceLabel.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this._drinkPriceLabel.Location = new System.Drawing.Point(3, 162);
+            this._drinkPriceLabel.Name = "_drinkPriceLabel";
+            this._drinkPriceLabel.Size = new System.Drawing.Size(97, 20);
+            this._drinkPriceLabel.TabIndex = 3;
+            this._drinkPriceLabel.Text = "價格 :";
+            this._drinkPriceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // _drinkNameTextBox
+            // 
+            this._drinkNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this._drinkNameTextBox.Location = new System.Drawing.Point(124, 87);
+            this._drinkNameTextBox.Name = "_drinkNameTextBox";
+            this._drinkNameTextBox.Size = new System.Drawing.Size(98, 22);
+            this._drinkNameTextBox.TabIndex = 4;
+            // 
+            // _drinkPriceTextBox
+            // 
+            this._drinkPriceTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this._drinkPriceTextBox.Location = new System.Drawing.Point(124, 161);
+            this._drinkPriceTextBox.Name = "_drinkPriceTextBox";
+            this._drinkPriceTextBox.Size = new System.Drawing.Size(98, 22);
+            this._drinkPriceTextBox.TabIndex = 5;
+            // 
             // _additionManipulateGroupBox
             // 
+            this._additionManipulateGroupBox.Controls.Add(this._additionManipulateTableLayoutPanel);
             this._additionManipulateGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this._additionManipulateGroupBox.Location = new System.Drawing.Point(315, 245);
             this._additionManipulateGroupBox.Name = "_additionManipulateGroupBox";
@@ -603,101 +873,91 @@
             this._additionManipulateGroupBox.TabStop = false;
             this._additionManipulateGroupBox.Text = "加料清單操作";
             // 
-            // _drinkButtonColumn
+            // _additionManipulateTableLayoutPanel
             // 
-            this._drinkButtonColumn.FillWeight = 40F;
-            this._drinkButtonColumn.HeaderText = "";
-            this._drinkButtonColumn.Name = "_drinkButtonColumn";
-            this._drinkButtonColumn.ReadOnly = true;
+            this._additionManipulateTableLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._additionManipulateTableLayoutPanel.ColumnCount = 3;
+            this._additionManipulateTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46F));
+            this._additionManipulateTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8F));
+            this._additionManipulateTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46F));
+            this._additionManipulateTableLayoutPanel.Controls.Add(this._newAdditionButton, 0, 0);
+            this._additionManipulateTableLayoutPanel.Controls.Add(this._fileImportAdditionButton, 2, 0);
+            this._additionManipulateTableLayoutPanel.Controls.Add(this._additionNameLabel, 0, 1);
+            this._additionManipulateTableLayoutPanel.Controls.Add(this._additionPriceLabel, 0, 2);
+            this._additionManipulateTableLayoutPanel.Controls.Add(this._additionNameTextBox, 2, 1);
+            this._additionManipulateTableLayoutPanel.Controls.Add(this._additionPriceTextBox, 2, 2);
+            this._additionManipulateTableLayoutPanel.Location = new System.Drawing.Point(6, 21);
+            this._additionManipulateTableLayoutPanel.Name = "_additionManipulateTableLayoutPanel";
+            this._additionManipulateTableLayoutPanel.RowCount = 3;
+            this._additionManipulateTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this._additionManipulateTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this._additionManipulateTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this._additionManipulateTableLayoutPanel.Size = new System.Drawing.Size(225, 209);
+            this._additionManipulateTableLayoutPanel.TabIndex = 1;
             // 
-            // _drinkNameColumn
+            // _newAdditionButton
             // 
-            this._drinkNameColumn.FillWeight = 110F;
-            this._drinkNameColumn.HeaderText = "名稱";
-            this._drinkNameColumn.Name = "_drinkNameColumn";
-            this._drinkNameColumn.ReadOnly = true;
-            this._drinkNameColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this._newAdditionButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this._newAdditionButton.Location = new System.Drawing.Point(3, 3);
+            this._newAdditionButton.Name = "_newAdditionButton";
+            this._newAdditionButton.Size = new System.Drawing.Size(97, 56);
+            this._newAdditionButton.TabIndex = 0;
+            this._newAdditionButton.Text = "新增";
+            this._newAdditionButton.UseVisualStyleBackColor = true;
+            this._newAdditionButton.Click += new System.EventHandler(this.ClickNewAdditionButton);
             // 
-            // _drinkPriceColumn
+            // _fileImportAdditionButton
             // 
-            this._drinkPriceColumn.FillWeight = 70F;
-            this._drinkPriceColumn.HeaderText = "價格";
-            this._drinkPriceColumn.Name = "_drinkPriceColumn";
-            this._drinkPriceColumn.ReadOnly = true;
-            this._drinkPriceColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this._fileImportAdditionButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this._fileImportAdditionButton.Location = new System.Drawing.Point(124, 3);
+            this._fileImportAdditionButton.Name = "_fileImportAdditionButton";
+            this._fileImportAdditionButton.Size = new System.Drawing.Size(98, 56);
+            this._fileImportAdditionButton.TabIndex = 1;
+            this._fileImportAdditionButton.Text = "從檔案匯入";
+            this._fileImportAdditionButton.UseVisualStyleBackColor = true;
+            this._fileImportAdditionButton.Click += new System.EventHandler(this.ClickFileImportAdditionButton);
             // 
-            // _additionButtonColumn
+            // _additionNameLabel
             // 
-            this._additionButtonColumn.FillWeight = 40F;
-            this._additionButtonColumn.HeaderText = "";
-            this._additionButtonColumn.Name = "_additionButtonColumn";
-            this._additionButtonColumn.ReadOnly = true;
+            this._additionNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this._additionNameLabel.AutoSize = true;
+            this._additionNameLabel.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this._additionNameLabel.Location = new System.Drawing.Point(3, 88);
+            this._additionNameLabel.Name = "_additionNameLabel";
+            this._additionNameLabel.Size = new System.Drawing.Size(97, 20);
+            this._additionNameLabel.TabIndex = 2;
+            this._additionNameLabel.Text = "加料名稱 :";
+            this._additionNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // _additionNameColumn
+            // _additionPriceLabel
             // 
-            this._additionNameColumn.FillWeight = 110F;
-            this._additionNameColumn.HeaderText = "名稱";
-            this._additionNameColumn.Name = "_additionNameColumn";
-            this._additionNameColumn.ReadOnly = true;
-            this._additionNameColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this._additionPriceLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this._additionPriceLabel.AutoSize = true;
+            this._additionPriceLabel.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this._additionPriceLabel.Location = new System.Drawing.Point(3, 162);
+            this._additionPriceLabel.Name = "_additionPriceLabel";
+            this._additionPriceLabel.Size = new System.Drawing.Size(97, 20);
+            this._additionPriceLabel.TabIndex = 3;
+            this._additionPriceLabel.Text = "價格 :";
+            this._additionPriceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // _additionPriceColumn
+            // _additionNameTextBox
             // 
-            this._additionPriceColumn.FillWeight = 70F;
-            this._additionPriceColumn.HeaderText = "價格";
-            this._additionPriceColumn.Name = "_additionPriceColumn";
-            this._additionPriceColumn.ReadOnly = true;
-            this._additionPriceColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this._additionNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this._additionNameTextBox.Location = new System.Drawing.Point(124, 87);
+            this._additionNameTextBox.Name = "_additionNameTextBox";
+            this._additionNameTextBox.Size = new System.Drawing.Size(98, 22);
+            this._additionNameTextBox.TabIndex = 6;
             // 
-            // _orderNameColumn
+            // _additionPriceTextBox
             // 
-            this._orderNameColumn.FillWeight = 90F;
-            this._orderNameColumn.HeaderText = "飲料名稱";
-            this._orderNameColumn.Name = "_orderNameColumn";
-            this._orderNameColumn.ReadOnly = true;
-            this._orderNameColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // _orderPriceColumn
-            // 
-            this._orderPriceColumn.FillWeight = 40F;
-            this._orderPriceColumn.HeaderText = "價格";
-            this._orderPriceColumn.Name = "_orderPriceColumn";
-            this._orderPriceColumn.ReadOnly = true;
-            this._orderPriceColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // _orderSugarColumn
-            // 
-            this._orderSugarColumn.FillWeight = 40F;
-            this._orderSugarColumn.HeaderText = "甜度";
-            this._orderSugarColumn.Name = "_orderSugarColumn";
-            this._orderSugarColumn.ReadOnly = true;
-            this._orderSugarColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // _orderTemperatureColumn
-            // 
-            this._orderTemperatureColumn.FillWeight = 40F;
-            this._orderTemperatureColumn.HeaderText = "溫度";
-            this._orderTemperatureColumn.Name = "_orderTemperatureColumn";
-            this._orderTemperatureColumn.ReadOnly = true;
-            this._orderTemperatureColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // _orderAdditionColumn
-            // 
-            this._orderAdditionColumn.FillWeight = 83F;
-            this._orderAdditionColumn.HeaderText = "加料";
-            this._orderAdditionColumn.Name = "_orderAdditionColumn";
-            this._orderAdditionColumn.ReadOnly = true;
-            this._orderAdditionColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // _orderButtonColumn
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.NullValue = "刪除";
-            this._orderButtonColumn.DefaultCellStyle = dataGridViewCellStyle1;
-            this._orderButtonColumn.FillWeight = 40F;
-            this._orderButtonColumn.HeaderText = "";
-            this._orderButtonColumn.Name = "_orderButtonColumn";
-            this._orderButtonColumn.ReadOnly = true;
+            this._additionPriceTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this._additionPriceTextBox.Location = new System.Drawing.Point(124, 161);
+            this._additionPriceTextBox.Name = "_additionPriceTextBox";
+            this._additionPriceTextBox.Size = new System.Drawing.Size(98, 22);
+            this._additionPriceTextBox.TabIndex = 7;
             // 
             // EzDrinkForm
             // 
@@ -731,9 +991,14 @@
             ((System.ComponentModel.ISupportInitialize)(this._drinkListDataGridView)).EndInit();
             this._additionListGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this._additionListDataGridView)).EndInit();
+            this._drinkManipulateGroupBox.ResumeLayout(false);
+            this._drinkManipulateTableLayoutPanel.ResumeLayout(false);
+            this._drinkManipulateTableLayoutPanel.PerformLayout();
+            this._additionManipulateGroupBox.ResumeLayout(false);
+            this._additionManipulateTableLayoutPanel.ResumeLayout(false);
+            this._additionManipulateTableLayoutPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
@@ -781,11 +1046,31 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn _orderTemperatureColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn _orderAdditionColumn;
         private System.Windows.Forms.DataGridViewButtonColumn _orderButtonColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _additionNameColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _additionPriceColumn;
+        private DataGridViewDisableButtonColumn _additionButtonColumn;
+        private System.Windows.Forms.TableLayoutPanel _drinkManipulateTableLayoutPanel;
+        private System.Windows.Forms.Button _newDrinkButton;
+        private System.Windows.Forms.Button _fileImportDrinkButton;
+        private System.Windows.Forms.TableLayoutPanel _additionManipulateTableLayoutPanel;
+        private System.Windows.Forms.Button _newAdditionButton;
+        private System.Windows.Forms.Button _fileImportAdditionButton;
+        private System.Windows.Forms.Label _drinkNameLabel;
+        private System.Windows.Forms.Label _drinkPriceLabel;
+        private System.Windows.Forms.Label _additionNameLabel;
+        private System.Windows.Forms.Label _additionPriceLabel;
+        private System.Windows.Forms.TextBox _drinkNameTextBox;
+        private System.Windows.Forms.TextBox _drinkPriceTextBox;
+        private System.Windows.Forms.TextBox _additionNameTextBox;
+        private System.Windows.Forms.TextBox _additionPriceTextBox;
         private System.Windows.Forms.DataGridViewButtonColumn _drinkButtonColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn _drinkNameColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn _drinkPriceColumn;
-        private DataGridViewDisableButtonColumn _additionButtonColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn _additionNameColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn _additionPriceColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn _drinkListButtonColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _drinkListNameColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _drinkListPriceColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn _additionListButtonColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _additionListNameColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _additionListPriceColumn;
     }
 }

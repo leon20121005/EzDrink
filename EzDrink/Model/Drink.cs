@@ -14,6 +14,18 @@ namespace EzDrink
             _price = price;
         }
 
+        //Change the name of the drink
+        public void SetName(string name)
+        {
+            _name = name;
+        }
+
+        //Change the price of the drink
+        public void SetPrice(int price)
+        {
+            _price = price;
+        }
+
         //Return the name of the drink
         public string GetName()
         {
