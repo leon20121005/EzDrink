@@ -15,6 +15,7 @@ namespace EzDrink
         DrinkModel _drinkModel = new DrinkModel();
         OrderPresentation _orderPresentation = new OrderPresentation();
         ManagementPresentation _managementPresentation = new ManagementPresentation();
+        HistoryPresentation _historyPresentation = new HistoryPresentation();
 
         const int SUGAR_COLUMN = 2;
         const int TEMPERATURE_COLUMN = 3;
@@ -28,8 +29,8 @@ namespace EzDrink
             InitializeComponent();
             _drinkModel.InitializeList();
 
-            UpdateCategoryDataGridView();
-            UpdateAdditionDataGridView();
+            UpdateDrinkDataGridView(_drinkDataGridView, SELECT_BUTTON_TEXT);
+            UpdateAdditionDataGridView(_additionDataGridView, SELECT_BUTTON_TEXT);
             UpdateOrderButtonState();
             SetAdditionDataGridViewEnable(_orderPresentation.IsAdditionDataGridViewEnabled());
         }
@@ -41,11 +42,11 @@ namespace EzDrink
         }
 
         //Add the drink into the order list if clicking the select button (e.ColumnIndex = 0)
-        private void ClickCategoryDataGridViewCellContent(object sender, DataGridViewCellEventArgs e)
+        private void ClickDrinkDataGridViewCellContent(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 0)
             {
-                _orderPresentation.ClickCategoryDataGridView(_drinkModel, e.RowIndex);
+                _orderPresentation.ClickDrinkDataGridView(_drinkModel, e.RowIndex);
                 _orderDataGridView.Rows.Add(_drinkModel.GetDrinkName(e.RowIndex), _drinkModel.GetDrinkPrice(e.RowIndex));
                 UpdateOrderButtonState();
                 SetAdditionButtonDisable(_orderDataGridView.CurrentRow.Index);
@@ -57,9 +58,9 @@ namespace EzDrink
         {
             if (e.ColumnIndex == 0 && ((DataGridViewDisableButtonCell)_additionDataGridView.Rows[e.RowIndex].Cells[0]).Enabled != false)
             {
-                _orderPresentation.ClickAdditionDataGridView(_drinkModel, _additionDataGridView.CurrentRow.Index, _orderDataGridView.CurrentRow.Index);
-                _orderDataGridView.CurrentRow.Cells[1].Value = _drinkModel.GetOrderTotalPrice(_orderDataGridView.CurrentRow.Index).ToString();
-                _orderDataGridView.CurrentRow.Cells[ADDITION_COLUMN].Value += _additionDataGridView.CurrentRow.Cells[1].Value.ToString();
+                _orderPresentation.ClickAdditionDataGridView(_drinkModel, _orderDataGridView.CurrentRow.Index, _additionDataGridView.CurrentRow.Index);
+                _orderDataGridView.CurrentRow.Cells[1].Value = _drinkModel.OrderList.GetOrderTotalPrice(_orderDataGridView.CurrentRow.Index).ToString();
+                _orderDataGridView.CurrentRow.Cells[ADDITION_COLUMN].Value = _orderPresentation.GetAdditionItems(_drinkModel.OrderList, _orderDataGridView.CurrentRow.Index);
                 UpdateOrderButtonState();
                 SetAdditionButtonDisable(_orderDataGridView.CurrentRow.Index);
             }
@@ -76,16 +77,16 @@ namespace EzDrink
                 SetAdditionDataGridViewEnable(_orderPresentation.IsAdditionDataGridViewEnabled());
 
             }
-            if (_drinkModel.GetOrderListSize() != 0)
+            if (_drinkModel.OrderList.GetOrderListSize() != 0)
             {
                 SetAdditionButtonDisable(_orderDataGridView.CurrentRow.Index);
             }
         }
 
-        //Ensure that addition datagridview will always refresh when user clicks order datagridview
+        //Ensure that addition datagridview will always refresh when user clicks order datagridview 
         private void ClickOrderDataGridView(object sender, EventArgs e)
         {
-            if (_drinkModel.GetOrderListSize() != 0)
+            if (_drinkModel.OrderList.GetOrderListSize() != 0)
             {
                 SetAdditionButtonDisable(_orderDataGridView.CurrentRow.Index);
             }
@@ -158,23 +159,26 @@ namespace EzDrink
         //Store the current order list and clear the datagridview
         private void ClickPayButton(object sender, EventArgs e)
         {
+            int currentTotalPrice = _drinkModel.OrderList.GetOrderListTotalPrice();
             _orderPresentation.ClickPay(_drinkModel);
             _orderDataGridView.Rows.Clear();
             UpdateOrderButtonState();
             SetAdditionDataGridViewEnable(_orderPresentation.IsAdditionDataGridViewEnabled());
+            _historyTotalPriceLabel.Text = _historyPresentation.UpdateHistoryTotalPriceLabel(_drinkModel);
+            _historyDataGridView.Rows.Add(DateTime.Now.ToString("yyyy-MM-dd tt hh:mm:ss"), currentTotalPrice);
         }
 
         //Update the state of the order system buttons
         private void UpdateOrderButtonState()
         {
-            _normalSugarButton.Enabled = _orderPresentation.IsNormalSugarEnabled();
-            _halfSugarButton.Enabled = _orderPresentation.IsHalfSugarEnabled();
-            _lessSugarButton.Enabled = _orderPresentation.IsLessSugarEnabled();
-            _noSugarButton.Enabled = _orderPresentation.IsNoSugarEnabled();
-            _normalIceButton.Enabled = _orderPresentation.IsNormalIceEnabled();
-            _lessIceButton.Enabled = _orderPresentation.IsLessIceEnabled();
-            _noIceButton.Enabled = _orderPresentation.IsNoIceEnabled();
-            _hotButton.Enabled = _orderPresentation.IsHotEnabled();
+            _normalSugarButton.Enabled = _orderPresentation.IsSugarTemperatureEnabled();
+            _halfSugarButton.Enabled = _orderPresentation.IsSugarTemperatureEnabled();
+            _lessSugarButton.Enabled = _orderPresentation.IsSugarTemperatureEnabled();
+            _noSugarButton.Enabled = _orderPresentation.IsSugarTemperatureEnabled();
+            _normalIceButton.Enabled = _orderPresentation.IsSugarTemperatureEnabled();
+            _lessIceButton.Enabled = _orderPresentation.IsSugarTemperatureEnabled();
+            _noIceButton.Enabled = _orderPresentation.IsSugarTemperatureEnabled();
+            _hotButton.Enabled = _orderPresentation.IsSugarTemperatureEnabled();
             _payButton.Enabled = _orderPresentation.IsPayEnabled();
             _totalPriceLabel.Text = _orderPresentation.GetTotalPriceLabelText();
         }
@@ -193,11 +197,11 @@ namespace EzDrink
         private void SetAdditionButtonDisable(int orderListIndex)
         {
             SetAdditionDataGridViewEnable(true);
-            for (int i = 0; i < _drinkModel.GetOrderAdditionListSize(orderListIndex); i++)
+            for (int i = 0; i < _drinkModel.OrderList.GetOrderAdditionListSize(orderListIndex); i++)
             {
-                for (int j = 0; j < 4; j++)
+                for (int j = 0; j < _drinkModel.GetAdditionListSize(); j++)
                 {
-                    if (_drinkModel.GetAdditionName(j) == _drinkModel.GetOrderAdditionName(orderListIndex, i))
+                    if (_drinkModel.GetAdditionName(j) == _drinkModel.OrderList.GetOrderAdditionName(orderListIndex, i))
                     {
                         ((DataGridViewDisableButtonCell)_additionDataGridView.Rows[j].Cells[0]).Enabled = false;
                     }
@@ -209,22 +213,21 @@ namespace EzDrink
         //Show the development information if clicking about
         private void ClickAboutToolStripMenuItem(object sender, EventArgs e)
         {
-            MessageBox.Show("開發者學號: 103820010\n開發者名稱: 商資穎\n最後更新日期: 2016/10/26\n版本編號: 3.0", "About");
+            MessageBox.Show("開發者學號: 103820010\n開發者名稱: 商資穎\n最後更新日期: 2016/11/12\n版本編號: 4.0", "關於 EzDrink");
         }
 
-        //Initialize or refresh the datagridviews when changing the tab page
+        //Initialize and synchronize the date of datagridviews when changing the tab page
         private void ChangeTabControlSelectedIndex(object sender, EventArgs e)
         {
             if (_tabControl.SelectedTab == _orderSystemTabPage)
             {
-                UpdateCategoryDataGridView();
-                UpdateAdditionDataGridView();
+                UpdateDrinkDataGridView(_drinkDataGridView, SELECT_BUTTON_TEXT);
+                UpdateAdditionDataGridView(_additionDataGridView, SELECT_BUTTON_TEXT);
             }
             if (_tabControl.SelectedTab == _managementSystemTabPage)
             {
-                ClickPayButton(sender, e);
-                UpdateDrinkListDataGridView();
-                UpdateAdditionListDataGridView();
+                UpdateDrinkDataGridView(_drinkListDataGridView, DELETE_BUTTON_TEXT);
+                UpdateAdditionDataGridView(_additionDataGridView, SELECT_BUTTON_TEXT);
                 UpdateManagementButtonState();
             }
         }

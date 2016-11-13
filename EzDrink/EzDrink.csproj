@@ -60,9 +60,9 @@
     <Compile Include="EzDrinkForm.Designer.cs">
       <DependentUpon>EzDrinkForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\DrinkModelInitialization.cs" />
     <Compile Include="Model\Order.cs" />
     <Compile Include="Model\OrderList.cs" />
+    <Compile Include="PresentationModel\HistoryPresentation.cs" />
     <Compile Include="PresentationModel\ManagementPresentation.cs" />
     <Compile Include="PresentationModel\ManagementPresentationPrivate.cs" />
     <Compile Include="PresentationModel\OrderPresentation.cs" />

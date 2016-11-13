@@ -31,11 +31,9 @@ namespace EzDrink
         //Change the button state and access to the model when clciking new drink
         public void ClickNewDrink(DrinkModel drinkModel, string drinkName, string drinkPrice)
         {
-            if (_isDrinkNamePriceEnabled == false)
+            if (_isNewDrinkTextBoxEnabled == false)
             {
-                _isDrinkNamePriceEnabled = true;
-                _newDrinkText = CONFIRM_TEXT;
-                _fileImportDrinkText = CANCEL_TEXT;
+                SetNewDrinkEnable(true);
             }
             else
             {
@@ -53,11 +51,9 @@ namespace EzDrink
         //Change the button state and access to the model when clciking new addition
         public void ClickNewAddition(DrinkModel drinkModel, string additionName, string additionPrice)
         {
-            if (_isAdditionNamePriceEnabled == false)
+            if (_isNewAdditionTextBoxEnabled == false)
             {
-                _isAdditionNamePriceEnabled = true;
-                _newAdditionText = CONFIRM_TEXT;
-                _fileImportAdditionText = CANCEL_TEXT;
+                SetNewAdditionEnable(true);
             }
             else
             {
@@ -75,7 +71,7 @@ namespace EzDrink
         //Change the button state and access to the model when clciking file import drink
         public void ClickFileImportDrink(DrinkModel drinkModel)
         {
-            if (_isDrinkNamePriceEnabled == false)
+            if (_isNewDrinkTextBoxEnabled == false)
             {
                 OpenFileDialog openFileDialog = new OpenFileDialog();
                 openFileDialog.Filter = FILTER_PARAMETER;
@@ -88,16 +84,14 @@ namespace EzDrink
             }
             else
             {
-                _isDrinkNamePriceEnabled = false;
-                _newDrinkText = NEW_TEXT;
-                _fileImportDrinkText = FILE_IMPORT_TEXT;
+                SetNewDrinkEnable(false);
             }
         }
 
         //Change the button state and access to the model when clciking file import addition
         public void ClickFileImportAddition(DrinkModel drinkModel)
         {
-            if (_isAdditionNamePriceEnabled == false)
+            if (_isNewAdditionTextBoxEnabled == false)
             {
                 OpenFileDialog openFileDialog = new OpenFileDialog();
                 openFileDialog.Filter = FILTER_PARAMETER;
@@ -110,9 +104,7 @@ namespace EzDrink
             }
             else
             {
-                _isAdditionNamePriceEnabled = false;
-                _newAdditionText = NEW_TEXT;
-                _fileImportAdditionText = FILE_IMPORT_TEXT;
+                SetNewAdditionEnable(false);
             }
         }
 
@@ -139,15 +131,15 @@ namespace EzDrink
         }
 
         //Return the enabled state of the drink name/price text box
-        public bool IsDrinkNamePriceEnabled()
+        public bool IsNewDrinkTextBoxEnabled()
         {
-            return _isDrinkNamePriceEnabled;
+            return _isNewDrinkTextBoxEnabled;
         }
 
         //Return the enabled state of the addition name/price text box
-        public bool IsAdditionNamePriceEnabled()
+        public bool IsNewAdditionTextBoxEnabled()
         {
-            return _isAdditionNamePriceEnabled;
+            return _isNewAdditionTextBoxEnabled;
         }
 
         //Return the text of the new drink button
@@ -174,8 +166,8 @@ namespace EzDrink
             return _fileImportAdditionText;
         }
 
-        private bool _isDrinkNamePriceEnabled = false;
-        private bool _isAdditionNamePriceEnabled = false;
+        private bool _isNewDrinkTextBoxEnabled = false;
+        private bool _isNewAdditionTextBoxEnabled = false;
         private string _newDrinkText = NEW_TEXT;
         private string _fileImportDrinkText = FILE_IMPORT_TEXT;
         private string _newAdditionText = NEW_TEXT;

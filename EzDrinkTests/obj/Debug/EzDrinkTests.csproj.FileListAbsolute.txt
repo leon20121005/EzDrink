@@ -1,0 +1,10 @@
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\EzDrink\EzDrinkTests\bin\Debug\EzDrinkTests.dll
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\EzDrink\EzDrinkTests\bin\Debug\EzDrinkTests.pdb
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\EzDrink\EzDrinkTests\bin\Debug\EzDrink.exe
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\EzDrink\EzDrinkTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\EzDrink\EzDrinkTests\bin\Debug\EzDrink.pdb
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\EzDrink\EzDrinkTests\bin\Debug\zh-Hant\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\EzDrink\EzDrinkTests\obj\Debug\EzDrinkTests.csprojResolveAssemblyReference.cache
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\EzDrink\EzDrinkTests\obj\Debug\EzDrinkTests.dll
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\EzDrink\EzDrinkTests\obj\Debug\EzDrinkTests.pdb
+F:\105-1 NTUT\視窗程式設計課程相關\Homework\EzDrink\EzDrinkTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml

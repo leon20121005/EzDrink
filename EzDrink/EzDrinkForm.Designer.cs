@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this._menuStrip = new System.Windows.Forms.MenuStrip();
             this._fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,7 +46,7 @@
             this._orderAdditionColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._orderButtonColumn = new System.Windows.Forms.DataGridViewButtonColumn();
             this._categoryGroupBox = new System.Windows.Forms.GroupBox();
-            this._categoryDataGridView = new System.Windows.Forms.DataGridView();
+            this._drinkDataGridView = new System.Windows.Forms.DataGridView();
             this._drinkButtonColumn = new System.Windows.Forms.DataGridViewButtonColumn();
             this._drinkNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._drinkPriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -98,6 +98,21 @@
             this._additionPriceLabel = new System.Windows.Forms.Label();
             this._additionNameTextBox = new System.Windows.Forms.TextBox();
             this._additionPriceTextBox = new System.Windows.Forms.TextBox();
+            this._historyTabPage = new System.Windows.Forms.TabPage();
+            this._historyTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this._historyGroupBox = new System.Windows.Forms.GroupBox();
+            this._historyDataGridView = new System.Windows.Forms.DataGridView();
+            this._detailGroupBox = new System.Windows.Forms.GroupBox();
+            this._detailDataGridView = new System.Windows.Forms.DataGridView();
+            this._historyNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._historyPriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._historySugarColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._historyTemperatureColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._historyAdditionColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._historyTotalPriceTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this._historyTotalPriceLabel = new System.Windows.Forms.Label();
+            this._timeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._totalPriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._menuStrip.SuspendLayout();
             this._tabControl.SuspendLayout();
             this._orderSystemTabPage.SuspendLayout();
@@ -105,7 +120,7 @@
             this._orderGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._orderDataGridView)).BeginInit();
             this._categoryGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._categoryDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._drinkDataGridView)).BeginInit();
             this._additionGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._additionDataGridView)).BeginInit();
             this._sugarGroupBox.SuspendLayout();
@@ -123,6 +138,13 @@
             this._drinkManipulateTableLayoutPanel.SuspendLayout();
             this._additionManipulateGroupBox.SuspendLayout();
             this._additionManipulateTableLayoutPanel.SuspendLayout();
+            this._historyTabPage.SuspendLayout();
+            this._historyTableLayoutPanel.SuspendLayout();
+            this._historyGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._historyDataGridView)).BeginInit();
+            this._detailGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._detailDataGridView)).BeginInit();
+            this._historyTotalPriceTableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // _menuStrip
@@ -170,6 +192,7 @@
             // 
             this._tabControl.Controls.Add(this._orderSystemTabPage);
             this._tabControl.Controls.Add(this._managementSystemTabPage);
+            this._tabControl.Controls.Add(this._historyTabPage);
             this._tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this._tabControl.Location = new System.Drawing.Point(0, 24);
             this._tabControl.Name = "_tabControl";
@@ -299,9 +322,9 @@
             // 
             // _orderButtonColumn
             // 
-            dataGridViewCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle.NullValue = "刪除";
-            this._orderButtonColumn.DefaultCellStyle = dataGridViewCellStyle;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.NullValue = "刪除";
+            this._orderButtonColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this._orderButtonColumn.FillWeight = 40F;
             this._orderButtonColumn.HeaderText = "";
             this._orderButtonColumn.Name = "_orderButtonColumn";
@@ -309,7 +332,7 @@
             // 
             // _categoryGroupBox
             // 
-            this._categoryGroupBox.Controls.Add(this._categoryDataGridView);
+            this._categoryGroupBox.Controls.Add(this._drinkDataGridView);
             this._categoryGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this._categoryGroupBox.Location = new System.Drawing.Point(3, 3);
             this._categoryGroupBox.Name = "_categoryGroupBox";
@@ -319,31 +342,31 @@
             this._categoryGroupBox.TabStop = false;
             this._categoryGroupBox.Text = "飲料";
             // 
-            // _categoryDataGridView
+            // _drinkDataGridView
             // 
-            this._categoryDataGridView.AllowUserToAddRows = false;
-            this._categoryDataGridView.AllowUserToResizeColumns = false;
-            this._categoryDataGridView.AllowUserToResizeRows = false;
-            this._categoryDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this._drinkDataGridView.AllowUserToAddRows = false;
+            this._drinkDataGridView.AllowUserToResizeColumns = false;
+            this._drinkDataGridView.AllowUserToResizeRows = false;
+            this._drinkDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this._categoryDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this._categoryDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
-            this._categoryDataGridView.ColumnHeadersHeight = 20;
-            this._categoryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this._categoryDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this._drinkDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this._drinkDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
+            this._drinkDataGridView.ColumnHeadersHeight = 20;
+            this._drinkDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this._drinkDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this._drinkButtonColumn,
             this._drinkNameColumn,
             this._drinkPriceColumn});
-            this._categoryDataGridView.Location = new System.Drawing.Point(5, 21);
-            this._categoryDataGridView.Name = "_categoryDataGridView";
-            this._categoryDataGridView.ReadOnly = true;
-            this._categoryDataGridView.RowHeadersVisible = false;
-            this._categoryDataGridView.RowTemplate.Height = 24;
-            this._categoryDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this._categoryDataGridView.Size = new System.Drawing.Size(223, 452);
-            this._categoryDataGridView.TabIndex = 0;
-            this._categoryDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ClickCategoryDataGridViewCellContent);
+            this._drinkDataGridView.Location = new System.Drawing.Point(5, 21);
+            this._drinkDataGridView.Name = "_drinkDataGridView";
+            this._drinkDataGridView.ReadOnly = true;
+            this._drinkDataGridView.RowHeadersVisible = false;
+            this._drinkDataGridView.RowTemplate.Height = 24;
+            this._drinkDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this._drinkDataGridView.Size = new System.Drawing.Size(223, 452);
+            this._drinkDataGridView.TabIndex = 0;
+            this._drinkDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ClickDrinkDataGridViewCellContent);
             // 
             // _drinkButtonColumn
             // 
@@ -959,6 +982,185 @@
             this._additionPriceTextBox.Size = new System.Drawing.Size(98, 22);
             this._additionPriceTextBox.TabIndex = 7;
             // 
+            // _historyTabPage
+            // 
+            this._historyTabPage.Controls.Add(this._historyTableLayoutPanel);
+            this._historyTabPage.Location = new System.Drawing.Point(4, 22);
+            this._historyTabPage.Name = "_historyTabPage";
+            this._historyTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this._historyTabPage.Size = new System.Drawing.Size(876, 491);
+            this._historyTabPage.TabIndex = 2;
+            this._historyTabPage.Text = "歷史紀錄";
+            this._historyTabPage.UseVisualStyleBackColor = true;
+            // 
+            // _historyTableLayoutPanel
+            // 
+            this._historyTableLayoutPanel.ColumnCount = 5;
+            this._historyTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3F));
+            this._historyTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this._historyTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4F));
+            this._historyTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this._historyTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3F));
+            this._historyTableLayoutPanel.Controls.Add(this._historyGroupBox, 1, 0);
+            this._historyTableLayoutPanel.Controls.Add(this._detailGroupBox, 3, 0);
+            this._historyTableLayoutPanel.Controls.Add(this._historyTotalPriceTableLayoutPanel, 3, 1);
+            this._historyTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._historyTableLayoutPanel.Location = new System.Drawing.Point(3, 3);
+            this._historyTableLayoutPanel.Name = "_historyTableLayoutPanel";
+            this._historyTableLayoutPanel.RowCount = 2;
+            this._historyTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this._historyTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this._historyTableLayoutPanel.Size = new System.Drawing.Size(870, 485);
+            this._historyTableLayoutPanel.TabIndex = 0;
+            // 
+            // _historyGroupBox
+            // 
+            this._historyGroupBox.Controls.Add(this._historyDataGridView);
+            this._historyGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._historyGroupBox.Location = new System.Drawing.Point(29, 3);
+            this._historyGroupBox.Name = "_historyGroupBox";
+            this._historyTableLayoutPanel.SetRowSpan(this._historyGroupBox, 2);
+            this._historyGroupBox.Size = new System.Drawing.Size(385, 479);
+            this._historyGroupBox.TabIndex = 0;
+            this._historyGroupBox.TabStop = false;
+            this._historyGroupBox.Text = "歷史";
+            // 
+            // _historyDataGridView
+            // 
+            this._historyDataGridView.AllowUserToAddRows = false;
+            this._historyDataGridView.AllowUserToResizeColumns = false;
+            this._historyDataGridView.AllowUserToResizeRows = false;
+            this._historyDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._historyDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this._historyDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this._historyDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this._timeColumn,
+            this._totalPriceColumn});
+            this._historyDataGridView.Location = new System.Drawing.Point(5, 21);
+            this._historyDataGridView.Name = "_historyDataGridView";
+            this._historyDataGridView.ReadOnly = true;
+            this._historyDataGridView.RowHeadersVisible = false;
+            this._historyDataGridView.RowTemplate.Height = 24;
+            this._historyDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this._historyDataGridView.Size = new System.Drawing.Size(375, 452);
+            this._historyDataGridView.TabIndex = 0;
+            this._historyDataGridView.CurrentCellChanged += new System.EventHandler(this.ChangeHistoryDataGridViewCurrentCell);
+            // 
+            // _detailGroupBox
+            // 
+            this._detailGroupBox.Controls.Add(this._detailDataGridView);
+            this._detailGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._detailGroupBox.Location = new System.Drawing.Point(454, 3);
+            this._detailGroupBox.Name = "_detailGroupBox";
+            this._detailGroupBox.Size = new System.Drawing.Size(385, 430);
+            this._detailGroupBox.TabIndex = 1;
+            this._detailGroupBox.TabStop = false;
+            this._detailGroupBox.Text = "詳細";
+            // 
+            // _detailDataGridView
+            // 
+            this._detailDataGridView.AllowUserToAddRows = false;
+            this._detailDataGridView.AllowUserToResizeColumns = false;
+            this._detailDataGridView.AllowUserToResizeRows = false;
+            this._detailDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._detailDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this._detailDataGridView.ColumnHeadersHeight = 20;
+            this._detailDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this._detailDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this._historyNameColumn,
+            this._historyPriceColumn,
+            this._historySugarColumn,
+            this._historyTemperatureColumn,
+            this._historyAdditionColumn});
+            this._detailDataGridView.Location = new System.Drawing.Point(5, 21);
+            this._detailDataGridView.Name = "_detailDataGridView";
+            this._detailDataGridView.ReadOnly = true;
+            this._detailDataGridView.RowHeadersVisible = false;
+            this._detailDataGridView.RowTemplate.Height = 24;
+            this._detailDataGridView.Size = new System.Drawing.Size(375, 403);
+            this._detailDataGridView.TabIndex = 0;
+            // 
+            // _historyNameColumn
+            // 
+            this._historyNameColumn.FillWeight = 90F;
+            this._historyNameColumn.HeaderText = "飲料名稱";
+            this._historyNameColumn.Name = "_historyNameColumn";
+            this._historyNameColumn.ReadOnly = true;
+            // 
+            // _historyPriceColumn
+            // 
+            this._historyPriceColumn.FillWeight = 60F;
+            this._historyPriceColumn.HeaderText = "價格";
+            this._historyPriceColumn.Name = "_historyPriceColumn";
+            this._historyPriceColumn.ReadOnly = true;
+            // 
+            // _historySugarColumn
+            // 
+            this._historySugarColumn.FillWeight = 60F;
+            this._historySugarColumn.HeaderText = "甜度";
+            this._historySugarColumn.Name = "_historySugarColumn";
+            this._historySugarColumn.ReadOnly = true;
+            // 
+            // _historyTemperatureColumn
+            // 
+            this._historyTemperatureColumn.FillWeight = 60F;
+            this._historyTemperatureColumn.HeaderText = "溫度";
+            this._historyTemperatureColumn.Name = "_historyTemperatureColumn";
+            this._historyTemperatureColumn.ReadOnly = true;
+            // 
+            // _historyAdditionColumn
+            // 
+            this._historyAdditionColumn.FillWeight = 102F;
+            this._historyAdditionColumn.HeaderText = "加料";
+            this._historyAdditionColumn.Name = "_historyAdditionColumn";
+            this._historyAdditionColumn.ReadOnly = true;
+            // 
+            // _historyTotalPriceTableLayoutPanel
+            // 
+            this._historyTotalPriceTableLayoutPanel.ColumnCount = 2;
+            this._historyTotalPriceTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this._historyTotalPriceTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this._historyTotalPriceTableLayoutPanel.Controls.Add(this._historyTotalPriceLabel, 1, 0);
+            this._historyTotalPriceTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._historyTotalPriceTableLayoutPanel.Location = new System.Drawing.Point(454, 439);
+            this._historyTotalPriceTableLayoutPanel.Name = "_historyTotalPriceTableLayoutPanel";
+            this._historyTotalPriceTableLayoutPanel.RowCount = 1;
+            this._historyTotalPriceTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this._historyTotalPriceTableLayoutPanel.Size = new System.Drawing.Size(385, 43);
+            this._historyTotalPriceTableLayoutPanel.TabIndex = 3;
+            // 
+            // _historyTotalPriceLabel
+            // 
+            this._historyTotalPriceLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this._historyTotalPriceLabel.AutoSize = true;
+            this._historyTotalPriceLabel.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this._historyTotalPriceLabel.Location = new System.Drawing.Point(272, 8);
+            this._historyTotalPriceLabel.Name = "_historyTotalPriceLabel";
+            this._historyTotalPriceLabel.Size = new System.Drawing.Size(110, 27);
+            this._historyTotalPriceLabel.TabIndex = 2;
+            this._historyTotalPriceLabel.Text = "總價 : ";
+            this._historyTotalPriceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // _timeColumn
+            // 
+            this._timeColumn.FillWeight = 270F;
+            this._timeColumn.HeaderText = "時間";
+            this._timeColumn.Name = "_timeColumn";
+            this._timeColumn.ReadOnly = true;
+            this._timeColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // _totalPriceColumn
+            // 
+            this._totalPriceColumn.FillWeight = 102F;
+            this._totalPriceColumn.HeaderText = "總價";
+            this._totalPriceColumn.Name = "_totalPriceColumn";
+            this._totalPriceColumn.ReadOnly = true;
+            this._totalPriceColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // EzDrinkForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -976,7 +1178,7 @@
             this._orderGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this._orderDataGridView)).EndInit();
             this._categoryGroupBox.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this._categoryDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._drinkDataGridView)).EndInit();
             this._additionGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this._additionDataGridView)).EndInit();
             this._sugarGroupBox.ResumeLayout(false);
@@ -997,8 +1199,17 @@
             this._additionManipulateGroupBox.ResumeLayout(false);
             this._additionManipulateTableLayoutPanel.ResumeLayout(false);
             this._additionManipulateTableLayoutPanel.PerformLayout();
+            this._historyTabPage.ResumeLayout(false);
+            this._historyTableLayoutPanel.ResumeLayout(false);
+            this._historyGroupBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._historyDataGridView)).EndInit();
+            this._detailGroupBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._detailDataGridView)).EndInit();
+            this._historyTotalPriceTableLayoutPanel.ResumeLayout(false);
+            this._historyTotalPriceTableLayoutPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion
@@ -1011,9 +1222,10 @@
         private System.Windows.Forms.TabControl _tabControl;
         private System.Windows.Forms.TabPage _orderSystemTabPage;
         private System.Windows.Forms.TabPage _managementSystemTabPage;
+        private System.Windows.Forms.TabPage _historyTabPage;
         private System.Windows.Forms.GroupBox _categoryGroupBox;
         private System.Windows.Forms.GroupBox _orderGroupBox;
-        private System.Windows.Forms.DataGridView _categoryDataGridView;
+        private System.Windows.Forms.DataGridView _drinkDataGridView;
         private System.Windows.Forms.DataGridView _orderDataGridView;
         private System.Windows.Forms.GroupBox _additionGroupBox;
         private System.Windows.Forms.DataGridView _additionDataGridView;
@@ -1072,5 +1284,21 @@
         private System.Windows.Forms.DataGridViewButtonColumn _additionListButtonColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn _additionListNameColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn _additionListPriceColumn;
+        private System.Windows.Forms.TableLayoutPanel _historyTableLayoutPanel;
+        private System.Windows.Forms.TableLayoutPanel _historyTotalPriceTableLayoutPanel;
+        private System.Windows.Forms.GroupBox _historyGroupBox;
+        private System.Windows.Forms.DataGridView _historyDataGridView;
+        private System.Windows.Forms.GroupBox _detailGroupBox;
+        private System.Windows.Forms.DataGridView _detailDataGridView;
+        private System.Windows.Forms.Label _historyTotalPriceLabel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _historyTimeColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _historyTotalPriceColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _historyNameColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _historyPriceColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _historySugarColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _historyTemperatureColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _historyAdditionColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _timeColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _totalPriceColumn;
     }
 }

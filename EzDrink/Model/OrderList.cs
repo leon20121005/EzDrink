@@ -38,6 +38,12 @@ namespace EzDrink
             _orderList[orderListIndex].AddAddition(drinkAddition);
         }
 
+        //Return the name of the order
+        public string GetOrderName(int orderListIndex)
+        {
+            return _orderList[orderListIndex].GetName();
+        }
+
         //Return the total price of the order
         public int GetOrderTotalPrice(int orderListIndex)
         {
@@ -56,7 +62,7 @@ namespace EzDrink
             return _orderList[orderListIndex].GetTemperature();
         }
 
-        //Return the name of the addition name of the order
+        //Return the addition name of the order list
         public string GetOrderAdditionName(int orderListIndex, int additionListIndex)
         {
             return _orderList[orderListIndex].GetAdditionName(additionListIndex);

@@ -8,21 +8,17 @@ namespace EzDrink
 {
     public class Drink
     {
+        //Constructor
         public Drink(string name, int price)
         {
             _name = name;
             _price = price;
         }
 
-        //Change the name of the drink
-        public void SetName(string name)
+        //Change the name and the price of the drink
+        public void SetDrink(string name, int price)
         {
             _name = name;
-        }
-
-        //Change the price of the drink
-        public void SetPrice(int price)
-        {
             _price = price;
         }
 

@@ -13,6 +13,38 @@ namespace EzDrink
         const char SPACE_CHARACTER = ' ';
         const char ENTER_CHARACTER = '\n';
 
+        //Set the enable state of the new drink
+        private void SetNewDrinkEnable(bool enabled)
+        {
+            _isNewDrinkTextBoxEnabled = enabled;
+            if (enabled)
+            {
+                _newDrinkText = CONFIRM_TEXT;
+                _fileImportDrinkText = CANCEL_TEXT;
+            }
+            else
+            {
+                _newDrinkText = NEW_TEXT;
+                _fileImportDrinkText = FILE_IMPORT_TEXT;
+            }
+        }
+
+        //Set the enable state of the new addition
+        private void SetNewAdditionEnable(bool enabled)
+        {
+            _isNewAdditionTextBoxEnabled = enabled;
+            if (enabled)
+            {
+                _newAdditionText = CONFIRM_TEXT;
+                _fileImportAdditionText = CANCEL_TEXT;
+            }
+            else
+            {
+                _newDrinkText = NEW_TEXT;
+                _fileImportDrinkText = FILE_IMPORT_TEXT;
+            }
+        }
+
         //Add the new drink into the drink list
         private void AddDrink(DrinkModel drinkModel, string drinkName, string drinkPrice)
         {
@@ -23,7 +55,9 @@ namespace EzDrink
             catch
             {
                 MessageBox.Show(INPUT_PRICE_ERROR_TEXT, NEW_ITEM_ERROR_TITLE);
+                return;
             }
+            SetNewDrinkEnable(false);
         }
 
         //Add the new addiiton into the addition list
@@ -36,7 +70,9 @@ namespace EzDrink
             catch
             {
                 MessageBox.Show(INPUT_PRICE_ERROR_TEXT, NEW_ITEM_ERROR_TITLE);
+                return;
             }
+            SetNewAdditionEnable(false);
         }
 
         //Read the text in the file and add into the drink list
@@ -73,7 +109,7 @@ namespace EzDrink
                 catch
                 {
                     MessageBox.Show(FILE_IMPORT_ERROR_TEXT, FILE_IMPORT_ERROR_TITLE);
-                    ClickFileImportDrink(drinkModel);
+                    ClickFileImportAddition(drinkModel);
                     break;
                 }
             }

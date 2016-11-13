@@ -8,11 +8,59 @@ namespace EzDrink
 {
     public partial class DrinkModel
     {
-        OrderList _orderList = new OrderList();
-
         List<Drink> _drinkList = new List<Drink>();
         List<DrinkAddition> _additionList = new List<DrinkAddition>();
-        List<OrderList> _allList = new List<OrderList>();
+        OrderList _orderList = new OrderList();
+        List<OrderList> _historyOrderList = new List<OrderList>();
+
+        #region Constant Declaration
+
+        const string DRINK1_NAME = "茉莉綠茶";
+        const int DRINK1_PRICE = 20;
+        const string DRINK2_NAME = "阿薩姆紅茶";
+        const int DRINK2_PRICE = 25;
+        const string DRINK3_NAME = "高山青茶";
+        const int DRINK3_PRICE = 40;
+        const string DRINK4_NAME = "鐵觀音";
+        const int DRINK4_PRICE = 50;
+        const string DRINK5_NAME = "烏龍青茶";
+        const int DRINK5_PRICE = 30;
+
+        const string ADDITION1_NAME = "珍珠";
+        const int ADDITION1_PRICE = 5;
+        const string ADDITION2_NAME = "椰果";
+        const int ADDITION2_PRICE = 5;
+        const string ADDITION3_NAME = "仙草";
+        const int ADDITION3_PRICE = 10;
+        const string ADDITION4_NAME = "布丁";
+        const int ADDITION4_PRICE = 10;
+
+        const string NORMAL_SUGAR_TEXT = "正常";
+        const string HALF_SUGAR_TEXT = "半糖";
+        const string LESS_SUGAR_TEXT = "少糖";
+        const string NO_SUGAR_TEXT = "無糖";
+        const string NORMAL_ICE_TEXT = "正常";
+        const string LESS_ICE_TEXT = "少冰";
+        const string NO_ICE_TEXT = "去冰";
+        const string HOT_TEXT = "溫熱";
+        const string ERROR_TEXT = "Error";
+
+        #endregion
+
+        //Initialize the drink list and the drink addition list
+        public void InitializeList()
+        {
+            _drinkList.Add(new Drink(DRINK1_NAME, DRINK1_PRICE));
+            _drinkList.Add(new Drink(DRINK2_NAME, DRINK2_PRICE));
+            _drinkList.Add(new Drink(DRINK3_NAME, DRINK3_PRICE));
+            _drinkList.Add(new Drink(DRINK4_NAME, DRINK4_PRICE));
+            _drinkList.Add(new Drink(DRINK5_NAME, DRINK5_PRICE));
+
+            _additionList.Add(new DrinkAddition(ADDITION1_NAME, ADDITION1_PRICE));
+            _additionList.Add(new DrinkAddition(ADDITION2_NAME, ADDITION2_PRICE));
+            _additionList.Add(new DrinkAddition(ADDITION3_NAME, ADDITION3_PRICE));
+            _additionList.Add(new DrinkAddition(ADDITION4_NAME, ADDITION4_PRICE));
+        }
 
         //Add the drink into the drink list
         public void AddDrink(string drinkName, int drinkPrice)
@@ -74,76 +122,54 @@ namespace EzDrink
             return _additionList.Count;
         }
 
+        //Return whether the drink is already existing or not
+        public bool IsDrinkExist(string drinkName)
+        {
+            for (int index = 0; index < _drinkList.Count; index++)
+            {
+                if (drinkName == _drinkList[index].GetName())
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        //Return whether the addition is already existing or not
+        public bool IsAdditionExist(string additionName)
+        {
+            for (int index = 0; index < _additionList.Count; index++)
+            {
+                if (additionName == _additionList[index].GetName())
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        //Update the name and the price of the drink in the drink list
+        public void UpdateDrink(int drinkListIndex, string drinkName, int drinkPrice)
+        {
+            _drinkList[drinkListIndex].SetDrink(drinkName, drinkPrice);
+        }
+
+        //Update the name and the price of the addition in the addition list
+        public void UpdateAddition(int additionListIndex, string additionName, int additionPrice)
+        {
+            _additionList[additionListIndex].SetAddition(additionName, additionPrice);
+        }
+
         //Add the order into the order list
         public void AddOrder(int drinkListIndex)
         {
             _orderList.AddOrder(new Order(_drinkList[drinkListIndex]));
-        } 
-
-        //Delete the order from the order list
-        public void DeleteOrder(int orderListIndex)
-        {
-            _orderList.DeleteOrder(orderListIndex);
-        }
-
-        //Set the sweetness of the order
-        public void SetOrderSugar(int orderListIndex, Sugar sugar)
-        {
-            _orderList.SetOrderSugar(orderListIndex, sugar);
-        }
-
-        //Set the ice level of the order
-        public void SetOrderTemperature(int orderListIndex, Temperature temperature)
-        {
-            _orderList.SetOrderTemperature(orderListIndex, temperature);
-        }
-
-        //Return the order sweetness in the order list
-        public Sugar GetOrderSugar(int orderListIndex)
-        {
-            return _orderList.GetOrderSugar(orderListIndex);
-        }
-
-        //Return the order ice level in the order list
-        public Temperature GetOrderTemperature(int orderListIndex)
-        {
-            return _orderList.GetOrderTemperature(orderListIndex);
         }
 
         //Add the drink addition into the order list
-        public void AddOrderAddition(int additionListIndex, int orderListIndex)
+        public void AddOrderAddition(int orderListIndex, int additionListIndex)
         {
             _orderList.AddOrderAddition(orderListIndex, _additionList[additionListIndex]);
-        }
-
-        //Return the order addition name in the order list
-        public string GetOrderAdditionName(int orderListIndex, int additionListIndex)
-        {
-            return _orderList.GetOrderAdditionName(orderListIndex, additionListIndex);
-        }
-
-        //Return the size of the order drink addition list 
-        public int GetOrderAdditionListSize(int orderListIndex)
-        {
-            return _orderList.GetOrderAdditionListSize(orderListIndex);
-        }
-
-        //Return the size of the order list
-        public int GetOrderListSize()
-        {
-            return _orderList.GetOrderListSize();
-        }
-
-        //Return the order total price in the order list
-        public int GetOrderTotalPrice(int orderListIndex)
-        {
-            return _orderList.GetOrderTotalPrice(orderListIndex);
-        }
-
-        //Return the order list total price from the order list
-        public int GetOrderListTotalPrice()
-        {
-            return _orderList.GetOrderListTotalPrice();
         }
 
         //Transform the sugar type into the string type
@@ -185,48 +211,90 @@ namespace EzDrink
         //Store the current order list into the list of the order list
         public void StoreOrderList()
         {
-            _allList.Add(_orderList);
-            _orderList.ClearOrderList();
+            _historyOrderList.Add(_orderList);
+            _orderList = new OrderList();
         }
 
-        //Return whether the drink is already existing or not
-        public bool IsDrinkExist(string drinkName)
+        //Get and access to the current order list
+        public OrderList OrderList
         {
-            for (int index = 0; index < _drinkList.Count; index++)
+            get
             {
-                if (drinkName == _drinkList[index].GetName())
-                {
-                    return true;
-                }
+                return _orderList;
             }
-            return false;
         }
 
-        //Return whether the addition is already existing or not
-        public bool IsAdditionExist(string additionName)
+        //Get and access to the history order list
+        public List<OrderList> HistoryOrderList
         {
-            for (int index = 0; index < _drinkList.Count; index++)
+            get
             {
-                if (additionName == _additionList[index].GetName())
-                {
-                    return true;
-                }
+                return _historyOrderList;
             }
-            return false;
-        }
-
-        //Update the name or the price of the drink in the drink list
-        public void UpdateDrink(int drinkListIndex, string drinkName, int drinkPrice)
-        {
-            _drinkList[drinkListIndex].SetName(drinkName);
-            _drinkList[drinkListIndex].SetPrice(drinkPrice);
-        }
-
-        //Update the name or the price of the addition in the addition list
-        public void UpdateAddition(int additionListIndex, string additionName, int additionPrice)
-        {
-            _additionList[additionListIndex].SetName(additionName);
-            _additionList[additionListIndex].SetPrice(additionPrice);
         }
     }
 }
+
+/*
+
+//Delete the order from the order list
+public void DeleteOrder(int orderListIndex)
+{
+    _orderList.DeleteOrder(orderListIndex);
+}
+
+//Set the sweetness of the order
+public void SetOrderSugar(int orderListIndex, Sugar sugar)
+{
+    _orderList.SetOrderSugar(orderListIndex, sugar);
+}
+
+//Set the ice level of the order
+public void SetOrderTemperature(int orderListIndex, Temperature temperature)
+{
+    _orderList.SetOrderTemperature(orderListIndex, temperature);
+}
+
+//Return the order sweetness in the order list
+public Sugar GetOrderSugar(int orderListIndex)
+{
+    return _orderList.GetOrderSugar(orderListIndex);
+}
+
+//Return the order ice level in the order list
+public Temperature GetOrderTemperature(int orderListIndex)
+{
+    return _orderList.GetOrderTemperature(orderListIndex);
+}
+
+//Return the order addition name of the order list
+public string GetOrderAdditionName(int orderListIndex, int additionListIndex)
+{
+    return _orderList.GetOrderAdditionName(orderListIndex, additionListIndex);
+}
+
+//Return the size of the order drink addition list 
+public int GetOrderAdditionListSize(int orderListIndex)
+{
+    return _orderList.GetOrderAdditionListSize(orderListIndex);
+}
+
+//Return the size of the order list
+public int GetOrderListSize()
+{
+    return _orderList.GetOrderListSize();
+}
+
+//Return the order total price in the order list
+public int GetOrderTotalPrice(int orderListIndex)
+{
+    return _orderList.GetOrderTotalPrice(orderListIndex);
+}
+
+//Return the order list total price from the order list
+public int GetOrderListTotalPrice()
+{
+    return _orderList.GetOrderListTotalPrice();
+}                
+
+*/
