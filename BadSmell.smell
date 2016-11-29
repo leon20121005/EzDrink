@@ -188,6 +188,90 @@
           <Reviews>
             <Smell>
               <Id>1</Id>
+              <SmellType>Long method(過長函式)</SmellType>
+              <HashCode>LongMethod.DataGridViewDisableButtonCell.Paint.61Graphics graphics;Rectangle clipBounds;Rectangle cellBounds;int rowIndex;DataGridViewElementStates elementState;object value;object formattedValue;string errorText;DataGridViewCellStyle cellStyle;DataGridViewAdvancedBorderStyle advancedBorderStyle;DataGridViewPaintParts paintParts;</HashCode>
+              <Severity>Red</Severity>
+              <Weight>61</Weight>
+              <Project>EzDrink</Project>
+              <File>DataGridViewDisableButtonCell.cs</File>
+              <Line>45</Line>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>2</Id>
+              <SmellType>ICS(空白與空行-1)</SmellType>
+              <HashCode>SpacingAndNewLine1</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>EzDrink</Project>
+              <File>DataGridViewDisableButtonCell.cs</File>
+              <Line>45</Line>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>3</Id>
+              <SmellType>ICS(空白與空行-1)</SmellType>
+              <HashCode>SpacingAndNewLine1</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>EzDrink</Project>
+              <File>DataGridViewDisableButtonCell.cs</File>
+              <Line>46</Line>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>4</Id>
+              <SmellType>ICS(空白與空行-1)</SmellType>
+              <HashCode>SpacingAndNewLine1</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>EzDrink</Project>
+              <File>DataGridViewDisableButtonCell.cs</File>
+              <Line>47</Line>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>5</Id>
+              <SmellType>ICS(空白與空行-1)</SmellType>
+              <HashCode>SpacingAndNewLine1</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>EzDrink</Project>
+              <File>DataGridViewDisableButtonCell.cs</File>
+              <Line>48</Line>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>6</Id>
+              <SmellType>ICS(空白與空行-1)</SmellType>
+              <HashCode>SpacingAndNewLine1</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>EzDrink</Project>
+              <File>DataGridViewDisableButtonCell.cs</File>
+              <Line>49</Line>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>7</Id>
+              <SmellType>ICS(空白與空行-1)</SmellType>
+              <HashCode>SpacingAndNewLine1</HashCode>
+              <Severity>Red</Severity>
+              <Weight>1</Weight>
+              <Project>EzDrink</Project>
+              <File>DataGridViewDisableButtonCell.cs</File>
+              <Line>50</Line>
+              <Comment />
+              <Auto>false</Auto>
+            </Smell>
+            <Smell>
+              <Id>8</Id>
               <SmellType>Unsuitable naming(名不符實)-DAYTON_CHARACTER(dayton)</SmellType>
               <HashCode>UnsuitableNaming.OrderPresentation.DAYTON_CHARACTER.DAYTON_CHARACTER</HashCode>
               <Severity>Red</Severity>
@@ -218,157 +302,169 @@
             <string>LiteralConstants.InitializeDrinkList."30"</string>
             <string>LiteralConstants.EzDrinkForm.2</string>
             <string>UnsuitableNaming.OrderPresentation.DAYTON_CHARACTER.DAYTON_CHARACTER</string>
+            <string>LongMethod.DataGridViewDisableButtonCell.Paint.61Graphics graphics;Rectangle clipBounds;Rectangle cellBounds;int rowIndex;DataGridViewElementStates elementState;object value;object formattedValue;string errorText;DataGridViewCellStyle cellStyle;DataGridViewAdvancedBorderStyle advancedBorderStyle;DataGridViewPaintParts paintParts;</string>
+            <string>SpacingAndNewLine1</string>
           </HashCodeIgnoreList>
           <AnalysisFileManager>
             <AnalysisFiles>
               <AnalysisFile>
                 <RelativePath>DataGridViewDisableButtonCell.cs</RelativePath>
                 <ProjectName>EzDrink</ProjectName>
-                <AnalysisFileType>Designer</AnalysisFileType>
+                <AnalysisFileType>Unknown</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>DataGridViewDisableButtonColumn.cs</RelativePath>
                 <ProjectName>EzDrink</ProjectName>
-                <AnalysisFileType>Designer</AnalysisFileType>
+                <AnalysisFileType>Unknown</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>EzDrinkForm.cs</RelativePath>
                 <ProjectName>EzDrink</ProjectName>
-                <AnalysisFileType>ViewOrController</AnalysisFileType>
+                <AnalysisFileType>Unknown</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>EzDrinkForm.Designer.cs</RelativePath>
                 <ProjectName>EzDrink</ProjectName>
-                <AnalysisFileType>Designer</AnalysisFileType>
+                <AnalysisFileType>Unknown</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>EzDrinkFormManagement.cs</RelativePath>
                 <ProjectName>EzDrink</ProjectName>
-                <AnalysisFileType>ViewOrController</AnalysisFileType>
+                <AnalysisFileType>Unknown</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>Model\Drink.cs</RelativePath>
                 <ProjectName>EzDrink</ProjectName>
-                <AnalysisFileType>Model</AnalysisFileType>
+                <AnalysisFileType>Unknown</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>Model\DrinkAddition.cs</RelativePath>
                 <ProjectName>EzDrink</ProjectName>
-                <AnalysisFileType>Model</AnalysisFileType>
+                <AnalysisFileType>Unknown</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>Model\DrinkModel.cs</RelativePath>
                 <ProjectName>EzDrink</ProjectName>
-                <AnalysisFileType>Model</AnalysisFileType>
+                <AnalysisFileType>Unknown</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>Model\Order.cs</RelativePath>
                 <ProjectName>EzDrink</ProjectName>
-                <AnalysisFileType>Model</AnalysisFileType>
+                <AnalysisFileType>Unknown</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>Model\OrderList.cs</RelativePath>
                 <ProjectName>EzDrink</ProjectName>
-                <AnalysisFileType>Model</AnalysisFileType>
+                <AnalysisFileType>Unknown</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>PresentationModel\HistoryPresentation.cs</RelativePath>
                 <ProjectName>EzDrink</ProjectName>
-                <AnalysisFileType>Model</AnalysisFileType>
+                <AnalysisFileType>Unknown</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>PresentationModel\ManagementPresentation.cs</RelativePath>
                 <ProjectName>EzDrink</ProjectName>
-                <AnalysisFileType>Model</AnalysisFileType>
+                <AnalysisFileType>Unknown</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>PresentationModel\ManagementPresentationPrivate.cs</RelativePath>
                 <ProjectName>EzDrink</ProjectName>
-                <AnalysisFileType>Model</AnalysisFileType>
+                <AnalysisFileType>Unknown</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>PresentationModel\OrderPresentation.cs</RelativePath>
                 <ProjectName>EzDrink</ProjectName>
-                <AnalysisFileType>Model</AnalysisFileType>
+                <AnalysisFileType>Unknown</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>Program.cs</RelativePath>
                 <ProjectName>EzDrink</ProjectName>
-                <AnalysisFileType>ViewOrController</AnalysisFileType>
+                <AnalysisFileType>Unknown</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>Properties\AssemblyInfo.cs</RelativePath>
                 <ProjectName>EzDrink</ProjectName>
-                <AnalysisFileType>Model</AnalysisFileType>
+                <AnalysisFileType>Unknown</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>Properties\Resources.Designer.cs</RelativePath>
                 <ProjectName>EzDrink</ProjectName>
-                <AnalysisFileType>Designer</AnalysisFileType>
+                <AnalysisFileType>Unknown</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>Properties\Settings.Designer.cs</RelativePath>
                 <ProjectName>EzDrink</ProjectName>
-                <AnalysisFileType>Designer</AnalysisFileType>
+                <AnalysisFileType>Unknown</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>Sugar.cs</RelativePath>
                 <ProjectName>EzDrink</ProjectName>
-                <AnalysisFileType>Model</AnalysisFileType>
+                <AnalysisFileType>Unknown</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>Temperature.cs</RelativePath>
                 <ProjectName>EzDrink</ProjectName>
-                <AnalysisFileType>Model</AnalysisFileType>
+                <AnalysisFileType>Unknown</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>EzDrinkFormUITest.cs</RelativePath>
+                <ProjectName>EzDrinkTests</ProjectName>
+                <AnalysisFileType>Unknown</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>Model\DrinkAdditionTests.cs</RelativePath>
                 <ProjectName>EzDrinkTests</ProjectName>
-                <AnalysisFileType>Test</AnalysisFileType>
+                <AnalysisFileType>Unknown</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>Model\DrinkModelTests.cs</RelativePath>
                 <ProjectName>EzDrinkTests</ProjectName>
-                <AnalysisFileType>Test</AnalysisFileType>
+                <AnalysisFileType>Unknown</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>Model\DrinkTests.cs</RelativePath>
                 <ProjectName>EzDrinkTests</ProjectName>
-                <AnalysisFileType>Test</AnalysisFileType>
+                <AnalysisFileType>Unknown</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>Model\OrderListTests.cs</RelativePath>
                 <ProjectName>EzDrinkTests</ProjectName>
-                <AnalysisFileType>Test</AnalysisFileType>
+                <AnalysisFileType>Unknown</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>Model\OrderTests.cs</RelativePath>
                 <ProjectName>EzDrinkTests</ProjectName>
-                <AnalysisFileType>Test</AnalysisFileType>
+                <AnalysisFileType>Unknown</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>PresentationModel\HistoryPresentationTests.cs</RelativePath>
                 <ProjectName>EzDrinkTests</ProjectName>
-                <AnalysisFileType>Test</AnalysisFileType>
+                <AnalysisFileType>Unknown</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>PresentationModel\ManagementPresentationTests.cs</RelativePath>
                 <ProjectName>EzDrinkTests</ProjectName>
-                <AnalysisFileType>Test</AnalysisFileType>
+                <AnalysisFileType>Unknown</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>PresentationModel\OrderPresentationTests.cs</RelativePath>
                 <ProjectName>EzDrinkTests</ProjectName>
-                <AnalysisFileType>Test</AnalysisFileType>
+                <AnalysisFileType>Unknown</AnalysisFileType>
               </AnalysisFile>
               <AnalysisFile>
                 <RelativePath>Properties\AssemblyInfo.cs</RelativePath>
                 <ProjectName>EzDrinkTests</ProjectName>
-                <AnalysisFileType>Model</AnalysisFileType>
+                <AnalysisFileType>Unknown</AnalysisFileType>
+              </AnalysisFile>
+              <AnalysisFile>
+                <RelativePath>Robot.cs</RelativePath>
+                <ProjectName>EzDrinkTests</ProjectName>
+                <AnalysisFileType>Unknown</AnalysisFileType>
               </AnalysisFile>
             </AnalysisFiles>
           </AnalysisFileManager>
-          <ProductionLoc>3019</ProductionLoc>
+          <ProductionLoc>3048</ProductionLoc>
           <TestLoc>1050</TestLoc>
         </CodeReview>
       </Data>

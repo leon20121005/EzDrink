@@ -56,7 +56,7 @@ namespace EzDrink.Tests
         {
             _managementPresentation.ClickFileImportDrink(_drinkModel);
             List<Drink> drinkList = (List<Drink>)_privateDrinkModel.GetFieldOrProperty("_drinkList");
-            Assert.AreEqual(0, drinkList.Count);
+            Assert.AreEqual(5, drinkList.Count);
         }
 
         [TestMethod()]
@@ -64,7 +64,7 @@ namespace EzDrink.Tests
         {
             _managementPresentation.ClickFileImportAddition(_drinkModel);
             List<DrinkAddition> additionList = (List<DrinkAddition>)_privateDrinkModel.GetFieldOrProperty("_additionList");
-            Assert.AreEqual(0, additionList.Count);
+            Assert.AreEqual(4, additionList.Count);
         }
 
         [TestMethod()]

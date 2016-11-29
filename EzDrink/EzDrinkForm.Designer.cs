@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this._menuStrip = new System.Windows.Forms.MenuStrip();
             this._fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -102,6 +102,8 @@
             this._historyTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this._historyGroupBox = new System.Windows.Forms.GroupBox();
             this._historyDataGridView = new System.Windows.Forms.DataGridView();
+            this._timeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._totalPriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._detailGroupBox = new System.Windows.Forms.GroupBox();
             this._detailDataGridView = new System.Windows.Forms.DataGridView();
             this._historyNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -111,8 +113,6 @@
             this._historyAdditionColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._historyTotalPriceTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this._historyTotalPriceLabel = new System.Windows.Forms.Label();
-            this._timeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._totalPriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._menuStrip.SuspendLayout();
             this._tabControl.SuspendLayout();
             this._orderSystemTabPage.SuspendLayout();
@@ -252,6 +252,7 @@
             // 
             // _orderDataGridView
             // 
+            this._orderDataGridView.AccessibleName = "_orderDataGridView";
             this._orderDataGridView.AllowUserToAddRows = false;
             this._orderDataGridView.AllowUserToResizeColumns = false;
             this._orderDataGridView.AllowUserToResizeRows = false;
@@ -322,9 +323,9 @@
             // 
             // _orderButtonColumn
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.NullValue = "刪除";
-            this._orderButtonColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.NullValue = "刪除";
+            this._orderButtonColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this._orderButtonColumn.FillWeight = 40F;
             this._orderButtonColumn.HeaderText = "";
             this._orderButtonColumn.Name = "_orderButtonColumn";
@@ -344,6 +345,7 @@
             // 
             // _drinkDataGridView
             // 
+            this._drinkDataGridView.AccessibleName = "_drinkDataGridView";
             this._drinkDataGridView.AllowUserToAddRows = false;
             this._drinkDataGridView.AllowUserToResizeColumns = false;
             this._drinkDataGridView.AllowUserToResizeRows = false;
@@ -404,6 +406,7 @@
             // 
             // _additionDataGridView
             // 
+            this._additionDataGridView.AccessibleName = "_additionDataGridView";
             this._additionDataGridView.AllowUserToAddRows = false;
             this._additionDataGridView.AllowUserToResizeColumns = false;
             this._additionDataGridView.AllowUserToResizeRows = false;
@@ -486,6 +489,7 @@
             // 
             // _halfSugarButton
             // 
+            this._halfSugarButton.AccessibleName = "_halfSugarButton";
             this._halfSugarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._halfSugarButton.Location = new System.Drawing.Point(119, 3);
             this._halfSugarButton.Name = "_halfSugarButton";
@@ -497,6 +501,7 @@
             // 
             // _normalSugarButton
             // 
+            this._normalSugarButton.AccessibleName = "_normalSugarButton";
             this._normalSugarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this._normalSugarButton.Location = new System.Drawing.Point(3, 3);
             this._normalSugarButton.Name = "_normalSugarButton";
@@ -508,6 +513,7 @@
             // 
             // _lessSugarButton
             // 
+            this._lessSugarButton.AccessibleName = "_lessSugarButton";
             this._lessSugarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._lessSugarButton.Location = new System.Drawing.Point(3, 55);
             this._lessSugarButton.Name = "_lessSugarButton";
@@ -519,6 +525,7 @@
             // 
             // _noSugarButton
             // 
+            this._noSugarButton.AccessibleName = "_noSugarButton";
             this._noSugarButton.Location = new System.Drawing.Point(119, 55);
             this._noSugarButton.Name = "_noSugarButton";
             this._noSugarButton.Size = new System.Drawing.Size(101, 37);
@@ -563,6 +570,7 @@
             // 
             // _hotButton
             // 
+            this._hotButton.AccessibleName = "_hotButton";
             this._hotButton.Location = new System.Drawing.Point(119, 55);
             this._hotButton.Name = "_hotButton";
             this._hotButton.Size = new System.Drawing.Size(101, 37);
@@ -573,6 +581,7 @@
             // 
             // _normalIceButton
             // 
+            this._normalIceButton.AccessibleName = "_normalIceButton";
             this._normalIceButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this._normalIceButton.Location = new System.Drawing.Point(3, 3);
             this._normalIceButton.Name = "_normalIceButton";
@@ -584,6 +593,7 @@
             // 
             // _noIceButton
             // 
+            this._noIceButton.AccessibleName = "_noIceButton";
             this._noIceButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._noIceButton.Location = new System.Drawing.Point(3, 55);
             this._noIceButton.Name = "_noIceButton";
@@ -595,6 +605,7 @@
             // 
             // _lessIceButton
             // 
+            this._lessIceButton.AccessibleName = "_lessIceButton";
             this._lessIceButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this._lessIceButton.Location = new System.Drawing.Point(119, 3);
             this._lessIceButton.Name = "_lessIceButton";
@@ -621,6 +632,7 @@
             // 
             // _payButton
             // 
+            this._payButton.AccessibleName = "_payButton";
             this._payButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._payButton.Location = new System.Drawing.Point(245, 3);
@@ -689,6 +701,7 @@
             // 
             // _drinkListDataGridView
             // 
+            this._drinkListDataGridView.AccessibleName = "_drinkListDataGridView";
             this._drinkListDataGridView.AllowUserToAddRows = false;
             this._drinkListDataGridView.AllowUserToResizeColumns = false;
             this._drinkListDataGridView.AllowUserToResizeRows = false;
@@ -745,6 +758,7 @@
             // 
             // _additionListDataGridView
             // 
+            this._additionListDataGridView.AccessibleName = "_additionListDataGridView";
             this._additionListDataGridView.AllowUserToAddRows = false;
             this._additionListDataGridView.AllowUserToResizeColumns = false;
             this._additionListDataGridView.AllowUserToResizeRows = false;
@@ -825,6 +839,7 @@
             // 
             // _newDrinkButton
             // 
+            this._newDrinkButton.AccessibleName = "_newDrinkButton";
             this._newDrinkButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this._newDrinkButton.Location = new System.Drawing.Point(3, 3);
             this._newDrinkButton.Name = "_newDrinkButton";
@@ -836,6 +851,7 @@
             // 
             // _fileImportDrinkButton
             // 
+            this._fileImportDrinkButton.AccessibleName = "_fileImportDrinkButton";
             this._fileImportDrinkButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this._fileImportDrinkButton.Location = new System.Drawing.Point(124, 3);
             this._fileImportDrinkButton.Name = "_fileImportDrinkButton";
@@ -871,6 +887,7 @@
             // 
             // _drinkNameTextBox
             // 
+            this._drinkNameTextBox.AccessibleName = "_drinkNameTextBox";
             this._drinkNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this._drinkNameTextBox.Location = new System.Drawing.Point(124, 87);
             this._drinkNameTextBox.Name = "_drinkNameTextBox";
@@ -879,6 +896,7 @@
             // 
             // _drinkPriceTextBox
             // 
+            this._drinkPriceTextBox.AccessibleName = "_drinkPriceTextBox";
             this._drinkPriceTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this._drinkPriceTextBox.Location = new System.Drawing.Point(124, 161);
             this._drinkPriceTextBox.Name = "_drinkPriceTextBox";
@@ -922,6 +940,7 @@
             // 
             // _newAdditionButton
             // 
+            this._newAdditionButton.AccessibleName = "_newAdditionButton";
             this._newAdditionButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this._newAdditionButton.Location = new System.Drawing.Point(3, 3);
             this._newAdditionButton.Name = "_newAdditionButton";
@@ -933,6 +952,7 @@
             // 
             // _fileImportAdditionButton
             // 
+            this._fileImportAdditionButton.AccessibleName = "_fileImportAdditionButton";
             this._fileImportAdditionButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this._fileImportAdditionButton.Location = new System.Drawing.Point(124, 3);
             this._fileImportAdditionButton.Name = "_fileImportAdditionButton";
@@ -968,6 +988,7 @@
             // 
             // _additionNameTextBox
             // 
+            this._additionNameTextBox.AccessibleName = "_additionNameTextBox";
             this._additionNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this._additionNameTextBox.Location = new System.Drawing.Point(124, 87);
             this._additionNameTextBox.Name = "_additionNameTextBox";
@@ -976,6 +997,7 @@
             // 
             // _additionPriceTextBox
             // 
+            this._additionPriceTextBox.AccessibleName = "__additionPriceTextBox";
             this._additionPriceTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this._additionPriceTextBox.Location = new System.Drawing.Point(124, 161);
             this._additionPriceTextBox.Name = "_additionPriceTextBox";
@@ -1027,6 +1049,7 @@
             // 
             // _historyDataGridView
             // 
+            this._historyDataGridView.AccessibleName = "_historyDataGridView";
             this._historyDataGridView.AllowUserToAddRows = false;
             this._historyDataGridView.AllowUserToResizeColumns = false;
             this._historyDataGridView.AllowUserToResizeRows = false;
@@ -1048,6 +1071,22 @@
             this._historyDataGridView.TabIndex = 0;
             this._historyDataGridView.CurrentCellChanged += new System.EventHandler(this.ChangeHistoryDataGridViewCurrentCell);
             // 
+            // _timeColumn
+            // 
+            this._timeColumn.FillWeight = 270F;
+            this._timeColumn.HeaderText = "時間";
+            this._timeColumn.Name = "_timeColumn";
+            this._timeColumn.ReadOnly = true;
+            this._timeColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // _totalPriceColumn
+            // 
+            this._totalPriceColumn.FillWeight = 102F;
+            this._totalPriceColumn.HeaderText = "總價";
+            this._totalPriceColumn.Name = "_totalPriceColumn";
+            this._totalPriceColumn.ReadOnly = true;
+            this._totalPriceColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // _detailGroupBox
             // 
             this._detailGroupBox.Controls.Add(this._detailDataGridView);
@@ -1061,6 +1100,7 @@
             // 
             // _detailDataGridView
             // 
+            this._detailDataGridView.AccessibleName = "_detailDataGridView";
             this._detailDataGridView.AllowUserToAddRows = false;
             this._detailDataGridView.AllowUserToResizeColumns = false;
             this._detailDataGridView.AllowUserToResizeRows = false;
@@ -1144,22 +1184,6 @@
             this._historyTotalPriceLabel.TabIndex = 2;
             this._historyTotalPriceLabel.Text = "總價 : ";
             this._historyTotalPriceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // _timeColumn
-            // 
-            this._timeColumn.FillWeight = 270F;
-            this._timeColumn.HeaderText = "時間";
-            this._timeColumn.Name = "_timeColumn";
-            this._timeColumn.ReadOnly = true;
-            this._timeColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // _totalPriceColumn
-            // 
-            this._totalPriceColumn.FillWeight = 102F;
-            this._totalPriceColumn.HeaderText = "總價";
-            this._totalPriceColumn.Name = "_totalPriceColumn";
-            this._totalPriceColumn.ReadOnly = true;
-            this._totalPriceColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // EzDrinkForm
             // 

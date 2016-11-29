@@ -78,12 +78,84 @@
     <timestamps>
       <styleCop>2016/10/05 21:21:16.373</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2016/10/18 13:52:08.000</sourceFile>
+      <sourceFile>2016/11/28 19:09:44.000</sourceFile>
       <parser>2016/10/05 21:21:16.373</parser>
       <KellyPalRules.KellyPalAnalyzer>2016/10/05 21:21:16.373</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
     </timestamps>
-    <violations />
+    <violations>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="LongMethod" ruleCheckId="LM0001">
+        <context>Long method(過長函式)</context>
+        <line>45</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="SpacingAndNewLine1" ruleCheckId="SN0001">
+        <context>ICS(空白與空行-1)</context>
+        <line>45</line>
+        <index>1143</index>
+        <endIndex>1144</endIndex>
+        <startLine>45</startLine>
+        <startColumn>57</startColumn>
+        <endLine>45</endLine>
+        <endColumn>58</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="SpacingAndNewLine1" ruleCheckId="SN0001">
+        <context>ICS(空白與空行-1)</context>
+        <line>46</line>
+        <index>1214</index>
+        <endIndex>1215</endIndex>
+        <startLine>46</startLine>
+        <startColumn>70</startColumn>
+        <endLine>46</endLine>
+        <endColumn>71</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="SpacingAndNewLine1" ruleCheckId="SN0001">
+        <context>ICS(空白與空行-1)</context>
+        <line>47</line>
+        <index>1281</index>
+        <endIndex>1282</endIndex>
+        <startLine>47</startLine>
+        <startColumn>66</startColumn>
+        <endLine>47</endLine>
+        <endColumn>67</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="SpacingAndNewLine1" ruleCheckId="SN0001">
+        <context>ICS(空白與空行-1)</context>
+        <line>48</line>
+        <index>1335</index>
+        <endIndex>1336</endIndex>
+        <startLine>48</startLine>
+        <startColumn>53</startColumn>
+        <endLine>48</endLine>
+        <endColumn>54</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="SpacingAndNewLine1" ruleCheckId="SN0001">
+        <context>ICS(空白與空行-1)</context>
+        <line>49</line>
+        <index>1381</index>
+        <endIndex>1382</endIndex>
+        <startLine>49</startLine>
+        <startColumn>45</startColumn>
+        <endLine>49</endLine>
+        <endColumn>46</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="KellyPalRules.KellyPalAnalyzer" rule="SpacingAndNewLine1" ruleCheckId="SN0001">
+        <context>ICS(空白與空行-1)</context>
+        <line>50</line>
+        <index>1447</index>
+        <endIndex>1448</endIndex>
+        <startLine>50</startLine>
+        <startColumn>65</startColumn>
+        <endLine>50</endLine>
+        <endColumn>66</endColumn>
+        <warning>False</warning>
+      </violation>
+    </violations>
   </sourcecode>
   <sourcecode name="DataGridViewDisableButtonColumn.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
@@ -100,7 +172,7 @@
     <timestamps>
       <styleCop>2016/10/05 21:21:16.373</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2016/11/11 08:51:26.000</sourceFile>
+      <sourceFile>2016/11/28 18:34:10.000</sourceFile>
       <parser>2016/10/05 21:21:16.373</parser>
       <KellyPalRules.KellyPalAnalyzer>2016/10/05 21:21:16.373</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>
@@ -111,7 +183,7 @@
     <timestamps>
       <styleCop>2016/10/05 21:21:16.373</styleCop>
       <settingsFile>0001/01/01 00:00:00.000</settingsFile>
-      <sourceFile>2016/11/02 13:36:46.000</sourceFile>
+      <sourceFile>2016/11/28 17:40:54.000</sourceFile>
       <parser>2016/10/05 21:21:16.373</parser>
       <KellyPalRules.KellyPalAnalyzer>2016/10/05 21:21:16.373</KellyPalRules.KellyPalAnalyzer>
       <KellyPalRules.KellyPalAnalyzer.FilesHashCode>0</KellyPalRules.KellyPalAnalyzer.FilesHashCode>

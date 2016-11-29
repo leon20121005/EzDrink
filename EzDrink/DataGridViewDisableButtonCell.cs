@@ -41,6 +41,7 @@ namespace EzDrink
             this._enabledValue = true;
         }
 
+        // Paint
         protected override void Paint(Graphics graphics,
             Rectangle clipBounds, Rectangle cellBounds, int rowIndex,
             DataGridViewElementStates elementState, object value,

@@ -213,7 +213,7 @@ namespace EzDrink
         //Show the development information if clicking about
         private void ClickAboutToolStripMenuItem(object sender, EventArgs e)
         {
-            MessageBox.Show("開發者學號: 103820010\n開發者名稱: 商資穎\n最後更新日期: 2016/11/12\n版本編號: 4.0", "關於 EzDrink");
+            MessageBox.Show("開發者學號: 103820010\n開發者名稱: 商資穎\n最後更新日期: 2016/11/29\n版本編號: 5.0", "關於 EzDrink");
         }
 
         //Initialize and synchronize the date of datagridviews when changing the tab page
@@ -227,7 +227,7 @@ namespace EzDrink
             if (_tabControl.SelectedTab == _managementSystemTabPage)
             {
                 UpdateDrinkDataGridView(_drinkListDataGridView, DELETE_BUTTON_TEXT);
-                UpdateAdditionDataGridView(_additionDataGridView, SELECT_BUTTON_TEXT);
+                UpdateAdditionDataGridView(_additionListDataGridView, SELECT_BUTTON_TEXT);
                 UpdateManagementButtonState();
             }
         }
